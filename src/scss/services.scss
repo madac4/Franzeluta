@@ -1,0 +1,87 @@
+.services{
+    margin-top: 50px;
+    &__header{
+        margin-bottom: 50px;
+        .sub-title{
+            display: flex;
+            justify-content: center;
+            @media (max-width: $tablet) {
+                flex-direction: column;
+            }
+            &__block{
+                text-align: center;
+                i{
+                    vertical-align: middle;
+                    font-size: 24px;
+                    margin-right: 10px;
+                }
+                a{
+                    letter-spacing: 0.06em;
+                    &:not(:first-of-type){
+                        @include adaptiv-value('margin-left', 20, 10, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    .services-body{
+        display: flex;
+        @media (max-width: $tablet) {
+           flex-direction: column;
+        }
+        .page__services-slider {
+            @include adaptiv-value('width', 640, 100, 1);
+            @media (max-width: $tablet) {
+                max-width: 640px;
+                width: 100%;
+            }
+            .services-slider__body {
+                .services-slider__slider {
+                    position: relative;
+                    .slider-services__body {
+                        .slider-services__slide {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .slider-services-controls {
+                        &__arrows {
+                            .slider-arrow {
+                                &__prev {
+                                    @include adaptiv-value('left', 50, 10, 1);
+                                }
+                                &__next {
+                                    @include adaptiv-value('right', 50, 10, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__desc{
+            p{
+                line-height: 160%;
+                letter-spacing: 0.06em;
+                margin-bottom: 20px;
+            }
+        }
+        &__buttons{
+            display: flex;
+            @media (max-width: $tablet){
+                justify-content: center;
+            }
+            @media (max-width: $mobileSmall){
+               flex-direction: column;
+            }
+            button{
+                text-transform: uppercase;
+                width: 220px;
+                @media (max-width: $mobileSmall){
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

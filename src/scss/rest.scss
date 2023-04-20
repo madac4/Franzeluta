@@ -1,0 +1,103 @@
+.rest{
+    &__intro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        @media (max-width: $tablet){
+           padding-inline: 15px;
+        }
+        h1{
+            color: #FFF;
+        }
+    }
+    &__body{
+        margin-top: 20px;
+    }
+    &__main{
+        .page__rest-slider {
+            .rest-slider__body {
+                .rest-slider__slider {
+                    position: relative;
+                    @include adaptiv-value('width', 860, 150, 1);
+                    @media (max-width: $mobile){
+                        width: 100%;
+                        max-width: 860px;
+                    }
+                    .slider-rest__body {
+                        .slider-rest__slide {
+                            img{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .slider-rest-controls {
+                        &__arrows {
+                            .slider-arrow {
+                                &__prev {
+                                    @include adaptiv-value('left', 50, 10, 1);
+                                }
+                                &__next {
+                                    @include adaptiv-value('right', 50, 10, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .rest-desc{
+            padding: 30px;
+            border: $border;
+            p{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__aside{
+        border: $border;
+        border-radius: 8px;
+        h3{
+            padding: 30px 0;
+            text-align: center;
+            background-color: $neutral200;
+            border-bottom: $border;
+            @media (max-width: $tablet){
+               padding: 30px 15px;
+            }
+        }
+        .aside-contact{
+            a,p{
+                display: block;
+                padding-inline: 30px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                &:not(:last-child){
+                    border-bottom: $border;
+                }
+            }
+        }
+        ul{
+            li{
+                position: relative;
+                padding-inline: 30px;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                &:not(:last-child){
+                    border-bottom: $border;
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 20px;
+                    width: 4px;
+                    height: 4px;
+                    background-color: #000;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
