@@ -1,0 +1,56 @@
+.articles {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+}
+.article {
+    &--link {
+        position: relative;
+    }
+    &__thumbnail {
+        width: 100%;
+        margin-bottom: 15px;
+        max-height: 180px;
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: $border;
+        }
+    }
+
+    a {
+        @include text-truncate(2);
+        @include adaptiv-value('font-size', 18, 16, 1);
+        margin-bottom: 15px;
+        font-weight: 500;
+        height: fit-content;
+        transition: 0.3s;
+        &:hover {
+            color: $primary600;
+        }
+    }
+
+    &__link {
+        font-size: 24px;
+        background-color: $error500;
+        height: 44px;
+        width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        border-radius: 8px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        i {
+            height: 24px;
+        }
+    }
+}
+
+time {
+    color: $neutral700;
+    letter-spacing: 0.06em;
+}

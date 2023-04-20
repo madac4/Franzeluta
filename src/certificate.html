@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                @@include('./components/page-navigation.html')
+                <section class="certificate">
+                    <h1>Certificate active</h1>
+                    <div class="certificate__container gap-2">
+                        <a href="#" class="certificat">
+                            <div class="certificat__image">
+                                <img src="@img/certificat6.jpg" alt="" />
+                            </div>
+                            Certificatul ISO 22000:2018
+                        </a>
+                        <a href="#" class="certificat">
+                            <div class="certificat__image">
+                                <img src="@img/certificat7.jpg" alt="" />
+                            </div>
+                            Certificatul ISO 22000:2018
+                        </a>
+                    </div>
+                </section>
+                <section class="certificate">
+                    <h1>Certificate arhivate</h1>
+                    <div class="certificate__container gap-2">
+                        <a href="#" class="certificat archive">
+                            <div class="certificat__image">
+                                <img src="@img/certificat1.jpg" alt="" />
+                            </div>
+                            Certificatul ISO 22000:2018
+                        </a>
+                        <a href="#" class="certificat archive">
+                            <div class="certificat__image">
+                                <img src="@img/certificat2.jpg" alt="" />
+                            </div>
+                            Certificatul ISO 22000:2018
+                        </a>
+                        <a href="#" class="certificat archive">
+                            <div class="certificat__image">
+                                <img src="@img/certificat3.jpg" alt="" />
+                            </div>
+                            Certificatul ISO 22000:2018
+                        </a>
+                        <a href="#" class="certificat archive">
+                            <div class="certificat__image">
+                                <img src="@img/certificat4.jpg" alt="" />
+                            </div>
+
+                            Certificatul ISO 22000:2018
+                        </a>
+                        <a href="#" class="certificat archive">
+                            <div class="certificat__image">
+                                <img src="@img/certificat5.jpg" alt="" />
+                            </div>
+                            Certificatul ISO 22000:2018
+                        </a>
+                    </div>
+                </section>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

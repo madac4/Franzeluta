@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                <div class="content-page">
+                    <div class="content-page__container">
+                        <h1>Ultimile achiziții</h1>
+
+                        <figure class="wp-block-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nr. achiziției șidata publicării:</th>
+                                        <th>Descrierea achiziției:</th>
+                                        <th>Anunţ de participare:</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>74 / 31.03.2023</td>
+                                        <td>Făină integrală în asortiment</td>
+                                        <td><a href="#">Conform SIA RSAP</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>72 / 31.03.2023</td>
+                                        <td>
+                                            Glucoză de porumb (melasă), sirop de sorbitol și
+                                            lecitină de soia
+                                        </td>
+                                        <td><a href="#">Conform SIA RSAP</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </figure>
+                    </div>
+                </div>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

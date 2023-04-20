@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                <div class="cart">
+                    <div class="cart__container sidebar-grid">
+                        <div class="cart-products">
+                            <div class="cart-products__product cart-product">
+                                <img src="@img/product.jpeg" class="cart-product__image" alt=""/>
+                                <div class="cart-product__body product-body">
+                                    <a href="#" class="product-body__name">Aspernatur voluptatem vel. </a>
+                                    <div class="product-body__footer product-footer">
+                                        <div class="product-footer__price">
+                                            Preț (mdl): <strong>30</strong>
+                                        </div>
+                                        <div class="product-footer__controls">
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-minus"></i></button>
+                                            <div class="button button__edit button__edit--big no-hover">1</div>
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-plus"></i></button>
+                                            <button class="button button__delete button__delete--big"><i class="mdi mdi-close"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products__product cart-product">
+                                <img src="@img/product.jpeg" class="cart-product__image" alt=""/>
+                                <div class="cart-product__body product-body">
+                                    <a href="#" class="product-body__name">Aspernatur voluptatem vel. </a>
+                                    <div class="product-body__footer product-footer">
+                                        <div class="product-footer__price">
+                                            Preț (mdl): <strong>30</strong>
+                                        </div>
+                                        <div class="product-footer__controls">
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-minus"></i></button>
+                                            <div class="button button__edit button__edit--big no-hover">1</div>
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-plus"></i></button>
+                                            <button class="button button__delete button__delete--big"><i class="mdi mdi-close"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products__product cart-product">
+                                <img src="@img/product.jpeg" class="cart-product__image" alt=""/>
+                                <div class="cart-product__body product-body">
+                                    <a href="#" class="product-body__name">Aspernatur voluptatem vel. </a>
+                                    <div class="product-body__footer product-footer">
+                                        <div class="product-footer__price">
+                                            Preț (mdl): <strong>30</strong>
+                                        </div>
+                                        <div class="product-footer__controls">
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-minus"></i></button>
+                                            <div class="button button__edit button__edit--big no-hover">1</div>
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-plus"></i></button>
+                                            <button class="button button__delete button__delete--big"><i class="mdi mdi-close"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products__product cart-product">
+                                <img src="@img/product.jpeg" class="cart-product__image" alt=""/>
+                                <div class="cart-product__body product-body">
+                                    <a href="#" class="product-body__name">Aspernatur voluptatem vel. </a>
+                                    <div class="product-body__footer product-footer">
+                                        <div class="product-footer__price">
+                                            Preț (mdl): <strong>30</strong>
+                                        </div>
+                                        <div class="product-footer__controls">
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-minus"></i></button>
+                                            <div class="button button__edit button__edit--big no-hover">1</div>
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-plus"></i></button>
+                                            <button class="button button__delete button__delete--big"><i class="mdi mdi-close"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products__product cart-product">
+                                <img src="@img/product.jpeg" class="cart-product__image" alt=""/>
+                                <div class="cart-product__body product-body">
+                                    <a href="#" class="product-body__name">Aspernatur voluptatem vel. </a>
+                                    <div class="product-body__footer product-footer">
+                                        <div class="product-footer__price">
+                                            Preț (mdl): <strong>30</strong>
+                                        </div>
+                                        <div class="product-footer__controls">
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-minus"></i></button>
+                                            <div class="button button__edit button__edit--big no-hover">1</div>
+                                            <button class="button button__edit button__edit--big"><i class="mdi mdi-plus"></i></button>
+                                            <button class="button button__delete button__delete--big"><i class="mdi mdi-close"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <aside class="cart-sidebar">
+                            <div class="cart-sidebar__count">Numărul de produse: <strong>6</strong></div>
+                            <div class="cart-sidebar__total">Preț total produse (mdl): <strong>12 520</strong></div>
+                            <div class="cart-sidebar__next">
+                                <a href="#" class="button button__gray">Finalizează comanda</a>                            
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+.contacts {
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    &__section {
+        margin-bottom: 50px;
+        &:nth-child(2n) {
+            .contacts-item__header {
+                background-color: $primary100;
+            }
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.contacts-item {
+    border: $border;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    &__header {
+        background-color: $neutral200;
+        @include adaptiv-value('padding', 18, 14, 1);
+        font-weight: 500;
+        text-align: center;
+        border-bottom: $border;
+    }
+    &__body {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        @include adaptiv-value('padding', 18, 14, 1);
+        p {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+}

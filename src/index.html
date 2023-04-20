@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                <section class="hero">
+                    <div class="page__hero-slider hero-slider">
+                        <div class="hero-slider__body">
+                            <div class="hero-slider__slider">
+                                <div class="slider-hero__body swiper">
+                                    <div class="slider-hero__slide" style="background: url('@img/hero.jpg') 50% 50% / cover no-repeat;"></div>
+                                    <div class="slider-hero__slide" style="background: url('@img/about.jpg') 50% 50% / cover no-repeat;"></div>
+                                    <div class="slider-hero__slide" style="background: url('@img/category-bg1.jpg') 50% 50% / cover no-repeat;"></div>
+                                </div>
+
+                                <div class="slider-hero-controls">
+                                    <div class="slider-hero-controls__dots"></div>
+                                    <div class="slider-hero-controls__arrows slider-arrows">
+                                        <button
+                                            type="button"
+                                            class="slider-arrow slider-arrow__prev"
+                                        ><i class="mdi mdi-chevron-left"></i></button>
+                                        <button
+                                            type="button"
+                                            class="slider-arrow slider-arrow__next"
+                                        ><i class="mdi mdi-chevron-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="about">
+                    <div class="about__container">
+                        <div class="about__columns about-content">
+                            <img src="@img/about.jpg" class="about-content__image" />
+
+                            <div class="about-content__body">
+                                <h2>Despre Franzeluța</h2>
+                                <p>
+                                    Nobis rerum consequatur architecto aperiam minus recusandae.
+                                    Tenetur aperiam enim ex perspiciatis dolor. Cum quia quos aut
+                                    possimus nisi libero. Doloribus deleniti veniam at quae quia
+                                    iste beatae fuga perferendis. Quo rem enim rerum sed qui.
+                                    Consequatur hic tempora quos dolorem.
+                                </p>
+                                <p>
+                                    Consequatur delectus animi et voluptatem aut qui et enim. Et
+                                    accusantium minus maiores aliquam tempora et. Aliquam aut quod
+                                    recusandae quo aspernatur eos illo. Porro quaerat in.
+                                </p>
+
+                                <a href="#" class="button button__gray">Citește totul</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="main-categories">
+                    <div class="main-categories__container">
+                        <div class="main-categories__grid">
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg1.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Produse de panificație</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">Pâini și franzele</a>
+                                    <a class="button button__chip" href="#">Produse împletite</a>
+                                    <a class="button button__chip" href="#">Chifle</a>
+                                    <a class="button button__chip" href="#">Pesmeți</a>
+                                    <a class="button button__chip" href="#">Rulade de cozonac</a>
+                                    <a class="button button__chip" href="#">Foitaje</a>
+                                    <a class="button button__chip" href="#">Pesmeți</a>
+                                    <a class="button button__chip" href="#">Produse de covrigarie</a>
+                                    <a class="button button__chip" href="#">Aluant congelat</a>
+                                </div>
+                            </div>
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg2.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Produse de patiserie</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">Biscuiți</a>
+                                    <a class="button button__chip" href="#">Turte dulci</a>
+                                    <a class="button button__chip" href="#">Checuri</a>
+                                    <a class="button button__chip" href="#">Fursecuri</a>
+                                    <a class="button button__chip" href="#">Gogoși</a>
+                                </div>
+                            </div>
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg3.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Produse de cofetărie</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">Torturi</a>
+                                    <a class="button button__chip" href="#">Prăjituri</a>
+                                    <a class="button button__chip" href="#">Rulade</a>
+                                    <a class="button button__chip" href="#">Produse din vafe</a>
+                                </div>
+                            </div>
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg4.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Bomboane și zefir</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">Bomboane</a>
+                                    <a class="button button__chip" href="#">Zefir</a>
+                                    <a class="button button__chip" href="#">Drajeuri</a>
+                                </div>
+                            </div>
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg5.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Produse la comandă</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">Pentru nuntă</a>
+                                    <a class="button button__chip" href="#">Pentru botez</a>
+                                    <a class="button button__chip" href="#">Pentru copii</a>
+                                    <a class="button button__chip" href="#">Pentru aniversări</a>
+                                    <a class="button button__chip" href="#">Torturi corporative</a>
+                                </div>
+                            </div>
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg6.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Paste făinoase</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">Paste făinoase</a>
+                                </div>
+                            </div>
+                            <div class="main-categories__item categories-item" style="background: url('@img/category-bg7.jpg') 50% 50% / cover no-repeat;">
+                                <h3>Produse de sărbători</h3>
+                                <div class="categories-item__list">
+                                    <a class="button button__chip" href="#">De Paști</a>
+                                    <a class="button button__chip" href="#">De Revelion</a>
+                                    <a class="button button__chip" href="#">Ziua Îndrăgostiților</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

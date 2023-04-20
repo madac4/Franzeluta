@@ -1,0 +1,140 @@
+.cart-popup {
+    border-radius: 8px;
+    border: $border;
+    box-shadow: 0px 12px 40px rgba(142, 142, 142, 0.24);
+    background-color: #fff;
+    position: absolute;
+    z-index: 4;
+    top: 120%;
+    width: 600px;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    transform: translateY(-20px);
+    @include adaptiv-value('padding', 30, 15, 1);
+    @media (max-width: $mobile) {
+        right: -54px;
+    }
+    @media (max-width: $mobileMedium) {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+    }
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiv-value('margin-bottom', 30, 20, 1);
+        h2 {
+            font-family: inherit;
+            font-weight: 500;
+        }
+        button {
+            font-size: 24px;
+        }
+    }
+    &__body {
+        max-height: 420px;
+        overflow: auto;
+        .cart-empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            @include adaptiv-value('height', 300, 150, 1);
+        }
+        .cart-items {
+            .cart-item {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                border: $border;
+                display: flex;
+                align-items: center;
+                border-radius: 8px;
+                overflow: hidden;
+                img {
+                    @include adaptiv-value('max-width', 120, 100, 1);
+                    @include adaptiv-value('max-height', 120, 100, 1);
+                    height: auto;
+                }
+                .item-body {
+                    width: 100%;
+                    border-left: $border;
+                    &__name {
+                        font-weight: 300;
+                        @include text-truncate(2);
+                        padding: 10px;
+                    }
+                    .item-footer {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        border-top: $border;
+                        margin-top: 10px;
+                        width: 100%;
+                        padding: 10px;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        &__controls {
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiv-value('margin-top', 30, 20, 1);
+        @media (max-width: $mobileMedium) {
+            margin-top: auto;
+        }
+        .cart-popup__all {
+            text-transform: uppercase;
+            color: $neutral700;
+            @media (max-width: $mobileMedium) {
+                display: none;
+            }
+            &:hover {
+                text-decoration: underline;
+                color: $neutral900;
+            }
+        }
+        .cart-total {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @media (max-width: $mobileMedium) {
+                justify-content: flex-end;
+                width: 100%;
+            }
+            &__price {
+                font-size: 20px;
+                font-weight: 500;
+                white-space: nowrap;
+            }
+            &__checkout {
+                text-transform: uppercase;
+                padding: 16px 28px;
+                width: fit-content;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.footer{
+    border-top: $border;
+    padding-top: 20px;
+    &__container{
+        display: grid;
+        grid-template-columns: 1fr 235px;
+        grid-gap: 20px;
+        @media (max-width: $mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__map{
+        iframe{
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            @media (max-width: $mobile) {
+               height: 340px;
+            }
+        }
+    }
+
+    &-categories{
+        @media (max-width: $mobile) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;                 
+        }
+        @media (max-width: $mobileSmall) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
+        &__item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include adaptiv-value('padding', 20, 15, 1);
+            border-radius: 8px;
+            color: #fff;
+            position: relative;
+            letter-spacing: 0.02em;
+            span{
+                z-index: 2;
+            }
+            @media (max-width: $mobileSmall) {
+                width: 100%;
+            }
+            &:not(:last-child){
+                margin-bottom: 10px;
+                @media (max-width: $mobile) {
+                    margin-bottom: 0;
+                }
+            }
+            &:hover{
+                &::after{
+                    background-color: rgba(0, 0, 0, 0.8); 
+                }
+            }
+            &::after{
+                content: '';
+                background-color: rgba(0, 0, 0, 0.6);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 8px;
+                transition: .3s;
+                inset: 0;
+            }
+        }
+    }
+    
+    &__copyrights{
+        width: 100%;
+        background-color: #222222;
+        color: #fff;
+        text-align: center;
+        @include adaptiv-value('padding', 20, 15, 1);
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-weight: 300;
+        margin-top: 20px;
+    }
+}
+

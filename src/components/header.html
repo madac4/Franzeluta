@@ -1,0 +1,140 @@
+<header class="header">
+    <div class="header__top">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="/">
+                    <img src="@img/logos/logo.png" alt="" />
+                </a>
+            </div>
+
+            <div class="header__contacts tablet-hidden">
+                <p>Produse de panificaţie: <a href="#">022 85-35-35</a></p>
+                <p>Produse de cofetărie şi paste făinoase: <a href="#">022 85-36-36</a></p>
+            </div>
+
+            <div class="header__controls header-controls">
+                <form class="header-controls__search mobileMedium-hidden">
+                    <input type="text" class="fill" placeholder="Căutare" />
+                    <button type="submit" class="mdi mdi-magnify"></button>
+                </form>
+
+                <form class="searchbar desktop-hidden--medium">
+                    <input type="text" class="fill" placeholder="Căutare" />
+                    <button type="button"><i class="mdi mdi-close"></i></button>
+                </form>
+
+                <div class="header-controls__cart">
+                    <div class="cart-toggler">
+                        <i class="mdi mdi-basket"></i> <span class="mobile-hidden">Coș</span> (147)
+                    </div>
+                    @@include('./cart-popup.html')
+                </div>
+
+                <button class="search-toggler button button__icon desktop-hidden--medium">
+                    <i class="mdi mdi-magnify"></i>
+                </button>
+
+                <div class="header-controls__languages header-languages mobile-hidden">
+                    <span class="header-languages__current">
+                        <img src="@img/icons/ro.svg" alt="ro" />
+                        <i class="mdi mdi-chevron-down"></i>
+                    </span>
+
+                    <div class="header-languages__dropdown">
+                        <a href="#">RU</a>
+                        <a href="#">EN</a>
+                    </div>
+                </div>
+
+                <button type="button" class="burger-filled">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="header__container">
+            <nav class="header__menu header-menu">
+                <ul class="header-menu__list">
+                    <li class="header-menu__item header-menu__item--childs">
+                        <i class="mdi mdi-menu mobile-hidden"></i> Catalog
+                        <ul class="submenu mobile-hidden">
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/panificatie.svg" alt="" />
+                                    Produse de panificație
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/patiserie.svg" alt="" />
+                                    Produse de patiserie
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/cofetarie.svg" alt="" />
+                                    Produse de cofetărie
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/bomboane.svg" alt="" />
+                                    Bomboane și zefir
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/paste.svg" alt="" />
+                                    Paste făinoase
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/sarbatori.svg" alt="" />
+                                    Produse de sărbători
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="@img/icons/comanda.svg" alt="" />
+                                    Produse la comandă
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header-menu__item active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Despre noi</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Noutăți</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Achiziții</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Servicii</a>
+                    </li>
+                    <li class="header-menu__item">
+                        <a href="#">Contacte</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__bottom-languages desktop-hidden--mobile">
+            <a href="#"> <img src="@img/icons/ro.svg" alt="" /> RO</a>
+            <a href="#"> <img src="@img/icons/ro.svg" alt="" /> RU</a>
+            <a href="#"> <img src="@img/icons/ro.svg" alt="" /> EN</a>
+        </div>
+        <div class="header__contacts desktop-hidden--mobile">
+            <p>Produse de panificaţie: <a href="#">022 85-35-35</a></p>
+            <p>Produse de cofetărie şi paste făinoase: <a href="#">022 85-36-36</a></p>
+        </div>
+    </div>
+</header>

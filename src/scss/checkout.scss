@@ -1,0 +1,148 @@
+.checkout {
+    margin-top: 30px;
+    @include adaptiv-value('margin-bottom', 80, 50, 1);
+    .button__navigation {
+        margin-bottom: 30px;
+    }
+    &-box {
+        border: $border;
+        @include adaptiv-value('padding', 30, 15, 1);
+        border-radius: 8px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+    &-body {
+        &__customer {
+            form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 20px;
+                @media (max-width: $mobileMedium) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+        }
+        &__calendar {
+            .calendar {
+                &-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    @include adaptiv-value('margin-bottom', 30, 20, 1);
+                    &__current {
+                        @include adaptiv-value('font-size', 20, 18, 1);
+                    }
+                    &__controls {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+                }
+
+                table {
+                    max-width: 470px;
+                    margin: 0 auto;
+                    @include adaptiv-value('border-spacing', 15, 5, 1);
+                    thead {
+                        td {
+                            color: $neutral700;
+                            text-align: center;
+                            @include adaptiv-value('font-size', 16, 14, 1);
+                        }
+                    }
+
+                    tbody.dates {
+                        td {
+                            @include adaptiv-value('width', 50, 35, 1);
+                            @include adaptiv-value('height', 50, 35, 1);
+                            @include adaptiv-value('font-size', 16, 14, 1);
+                            min-width: 30px;
+                            min-height: 44px;
+                            text-align: center;
+                            border: $border;
+                            border-radius: 50%;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            &:hover {
+                                background-color: $primary100;
+                                border-color: $primary100;
+                            }
+                            &.selected {
+                                background-color: $primary500;
+                                border-color: $primary500;
+                                color: #fff;
+                            }
+                            &.calendar__cell--empty {
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            &.calendar__cell--unavailable {
+                                opacity: 0.5;
+                                user-select: none;
+                                pointer-events: none;
+                                background-color: $neutral200;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__hours {
+            .checkout-hours {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                @media (max-width: $mobile) {
+                    flex-wrap: wrap;
+                }
+                &__interval {
+                    width: 100%;
+                    border: $border;
+                    border-radius: 8px;
+                    padding: 20px 0;
+                    transition: background-color 0.3s;
+                    &:hover {
+                        background-color: $neutral200;
+                        border-color: $neutral200;
+                    }
+                    &.selected {
+                        background-color: $neutral900;
+                        color: #fff;
+                        border-color: $neutral900;
+                    }
+                }
+            }
+        }
+    }
+    &-sidebar {
+        border: $border;
+        border-radius: 8px;
+        height: fit-content;
+        div {
+            @include adaptiv-value('padding', 26, 16, 1);
+            .warning {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $error500;
+                padding: 15px 0;
+                margin-top: 20px;
+                border-radius: 8px;
+                color: #fff;
+            }
+            .offer {
+                text-transform: uppercase;
+            }
+            form input {
+                width: 100%;
+            }
+            &:not(:last-child) {
+                border-bottom: $border;
+            }
+        }
+    }
+}

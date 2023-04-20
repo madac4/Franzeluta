@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                <div class="checkout">
+                    <div class="checkout__container">
+                        <a href="/" class="button button__navigation">
+                            <i class="mdi mdi-keyboard-backspace"></i> Vezi produsele
+                        </a>
+                    </div>
+                    <div class="checkout__container sidebar-grid">
+                        <div class="checkout-body">
+                            <div class="checkout-body__delivery checkout-box">
+                                <h3>Selectează fabrica de unde vreai să ridici produsele:</h3>
+                                <select name="fabric" id="fabric">
+                                    <option hidden selected>Selectează fabrica</option>
+                                    <option value="sarmizegetusa">
+                                        MD 2032, Republica Moldova, or. Chișinău, str.
+                                        Sarmizegetusa, 30
+                                    </option>
+                                    <option value="sarmizegetusa">
+                                        MD 2032, Republica Moldova, or. Chișinău, str.
+                                        Sarmizegetusa, 30
+                                    </option>
+                                    <option value="sarmizegetusa">
+                                        MD 2032, Republica Moldova, or. Chișinău, str.
+                                        Sarmizegetusa, 30
+                                    </option>
+                                    <option value="sarmizegetusa">
+                                        MD 2032, Republica Moldova, or. Chișinău, str.
+                                        Sarmizegetusa, 30
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="checkout-body__customer checkout-box">
+                                <h3>Indică date de contact pentru confirmare comandă:</h3>
+                                <form action="#">
+                                    <input type="text" placeholder="Numele" />
+                                    <input type="text" placeholder="Prenumele" />
+                                    <input type="email" placeholder="Poșta electronică" />
+                                    <input type="tel" placeholder="Numărul de telefon" />
+                                    <input
+                                        type="text"
+                                        placeholder="Data"
+                                        class="hidden"
+                                        id="date-input"
+                                    />
+                                    <input
+                                        type="text"
+                                        class="hidden"
+                                        id="hours-input"
+                                        placeholder="Intervalul de timp"
+                                    />
+                                </form>
+                            </div>
+
+                            <div class="checkout-body__calendar checkout-box">
+                                <h3>Selectează ziua:</h3>
+
+                                <div class="calendar">
+                                    <div class="calendar__header calendar-header">
+                                        <div class="calendar-header__current">Aprilie 2023</div>
+                                        <div class="calendar-header__controls">
+                                            <button type="button" class="button button__icon prev">
+                                                <i class="mdi mdi-chevron-left"></i>
+                                            </button>
+                                            <button type="button" class="button button__icon next">
+                                                <i class="mdi mdi-chevron-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td>Lu</td>
+                                                <td>Ma</td>
+                                                <td>Mi</td>
+                                                <td>Jo</td>
+                                                <td>Vi</td>
+                                                <td>Sâ</td>
+                                                <td>Du</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="dates"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="checkout-body__hours checkout-box">
+                                <h3>
+                                    Selectează intervalul de timp în care vreai să preiai comanda:
+                                </h3>
+
+                                <div class="checkout-hours">
+                                    <button class="checkout-hours__interval">07:00 - 11:00</button>
+                                    <button class="checkout-hours__interval">11:00 - 15:00</button>
+                                    <button class="checkout-hours__interval">15:00 - 18:00</button>
+                                </div>
+                            </div>
+                        </div>
+                        <aside class="checkout-sidebar">
+                            <div class="checkout-sidebar__payment">
+                                <h3>Metoda de achitare:</h3>
+                                <span class="warning">Doar cu cardul bancar</span>
+                            </div>
+
+                            <div class="checkout-sidebar__promo">
+                                <form action="#">
+                                    <input
+                                        type="text"
+                                        class="fill"
+                                        placeholder="Cod special pentru muncitori"
+                                    />
+                                </form>
+                            </div>
+
+                            <div class="checkout-sidebar__offer">
+                                <!-- <span class="offer">Fără reducere / cu reducere</span> -->
+                                Preț final produse (mdl):
+                                <strong>12 520</strong>
+                            </div>
+
+                            <div class="checkout-sidebar__order">
+                                <a href="#" class="button button__gray">Finalizează comanda</a>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

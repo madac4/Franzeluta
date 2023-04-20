@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                <div class="articles">
+                    @@include('./components/page-navigation.html')
+                    <div class="articles__container grid grid-4 gap-2">
+                        <article class="article">
+                            <div class="article__thumbnail">
+                                <img src="@img/about.jpg" alt="" />
+                            </div>
+
+                            <a href="#">
+                                Anunț cu privire la desfășurarea etapei a doua a concursului pentru
+                                ocuparea funcției vacante de director general al S.A. „Franzeluța”
+                                (Interviul).
+                            </a>
+                            <time>19 sept, 2022</time>
+                        </article>
+                        <article class="article">
+                            <div class="article__thumbnail">
+                                <img src="@img/article2.jpg" alt="" />
+                            </div>
+
+                            <a href="#"> Concurs de oferte! </a>
+                            <time>19 sept, 2022</time>
+                        </article>
+                        <article class="article">
+                            <div class="article__thumbnail">
+                                <img src="@img/article3.jpg" alt="" />
+                            </div>
+
+                            <a href="#"> La mulți ani, Franzeluța! </a>
+                            <time>19 sept, 2022</time>
+                        </article>
+                        <article class="article">
+                            <div class="article__thumbnail">
+                                <img src="@img/article1.jpg" alt="" />
+                            </div>
+
+                            <a href="#">
+                                Anunț cu privire la desfășurarea etapei a doua a concursului pentru
+                                ocuparea funcției vacante de director general al S.A. „Franzeluța”
+                                (Interviul).
+                            </a>
+                            <time>19 sept, 2022</time>
+                        </article>
+                        <article class="article">
+                            <div class="article__thumbnail">
+                                <img src="@img/article2.jpg" alt="" />
+                            </div>
+
+                            <a href="#"> Concurs de oferte! </a>
+                            <time>19 sept, 2022</time>
+                        </article>
+                        <article class="article">
+                            <div class="article__thumbnail">
+                                <img src="@img/article3.jpg" alt="" />
+                            </div>
+
+                            <a href="#"> La mulți ani, Franzeluța! </a>
+                            <time>19 sept, 2022</time>
+                        </article>
+                        <article class="article article--link">
+                            <div class="article__thumbnail">
+                                <img src="@img/about.jpg" alt="" />
+                            </div>
+
+                            <a href="#"> Franzeluța a lansat seria celor mai FRESH franzele! </a>
+                            <span class="article__link"><i class="mdi mdi-link"></i></span>
+                        </article>
+                    </div>
+
+                    <div class="articles__container">@@include('./components/pagination.html')</div>
+                </div>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+
+    <body>
+        <div class="wrapper">
+            @@include('./components/header.html')
+            <main>
+                <section class="response-page">
+                    <div class="response-page__container">
+                        <img src="@img/icons/success.svg" alt="success" />
+                        <p>
+                            Comanda dvs. nr. 143706 din 04.04.2023, ora 15:12, a fost creată cu
+                            succes. Vă mulțumim!
+                        </p>
+                        <a href="/" class="button button__navigation">
+                            <i class="mdi mdi-keyboard-backspace"></i> Înapoi spre pagina principală
+                        </a>
+                    </div>
+                </section>
+            </main>
+            @@include('./components/footer.html')
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script src="js/app.min.js"></script>
+    </body>
+</html>

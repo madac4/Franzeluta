@@ -1,0 +1,91 @@
+.statut {
+    &__container {
+        display: flex;
+        @media (max-width: $tablet) {
+            flex-direction: column;
+        }
+        .page__docs-slider {
+            @include adaptiv-value('width', 750, 100, 1);
+            @media (max-width: $tablet) {
+                width: 100%;
+            }
+            .docs-slider__body {
+                .docs-slider__slider {
+                    .slider-docs__body {
+                        .slider-docs__slide {
+                            width: 100%;
+                            iframe {
+                                width: 100%;
+                                @include adaptiv-value('height', 800, 500, 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .statut-right {
+            .slider-docs-controls {
+                display: flex;
+                align-items: center;
+                @include adaptiv-value('gap', 50, 5, 1);
+                &__crop {
+                    @include adaptiv-value('max-width', 54, 48, 1);
+                    @include adaptiv-value('max-height', 54, 48, 1);
+                }
+                &__pagination {
+                    &.swiper-pagination-fraction {
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        @include adaptiv-value('gap', 10, 5, 1);
+                    }
+                    .swiper-pagination-current,
+                    .swiper-pagination-total {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        @include adaptiv-value('width', 54, 48, 1);
+                        @include adaptiv-value('height', 54, 48, 1);
+                        border: $border;
+                        border-radius: 8px;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 160%;
+                        letter-spacing: 0.03em;
+                    }
+                    .swiper-pagination-current {
+                        background: #ffffff;
+                        color: $neutral900;
+                    }
+                    .swiper-pagination-total {
+                        background-color: $neutral900;
+                        color: #fff;
+                    }
+                }
+                &__arrows {
+                    display: flex;
+                    @include adaptiv-value('gap', 10, 5, 1);
+                    .slider-arrow {
+                        position: static;
+                        color: $neutral900;
+                        border-radius: 8px;
+                        background-color: $neutral100;
+                    }
+                }
+            }
+            p {
+                margin: 30px 0;
+                font-size: 20px;
+                line-height: 160%;
+                letter-spacing: 0.03em;
+                @media (max-width: $mobileSmall) {
+                    font-size: 18px;
+                    line-height: 140%;
+                }
+            }
+            a {
+                width: 220px;
+            }
+        }
+    }
+}

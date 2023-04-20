@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-weight: 300;
+}
+
+html {
+    line-height: 160%;
+    -webkit-text-size-adjust: 100%;
+}
+
+.mdi:before, .mdi-set{
+    line-height: 0 !important;
+}
+
+body {
+    font-family: $fontFamily, sans-serif;
+    font-size: $fontSize;
+    color: $neutral900;
+    overflow-x: hidden;
+    animation: fade 0.5s;
+    &.lock {
+        overflow: hidden;
+        touch-action: none;
+    }
+}
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $neutral900;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+button {
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+}
+
+small {
+    font-size: 80%;
+}
+
+img {
+    border-style: none;
+}
+
+textarea {
+    overflow: auto;
+}
+
+[hidden] {
+    display: none;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
