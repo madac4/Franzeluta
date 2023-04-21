@@ -380,12 +380,10 @@ if (historyImage) {
     });
 }
 
-const tabs = document.querySelector('.tabs')
-const tabsButtons = document.querySelectorAll('.tabs__button')
-const tabsContents = document.querySelectorAll('.tabs__content')
+const tabsList = document.querySelectorAll('.tabs')
 
-flsFunctions.tabs(tabs, tabsButtons, tabsContents)
-console.log(tabs, tabsButtons, tabsContents)
+flsFunctions.tabs(tabsList)
+
 
 // let sliderTemplate = new Swiper('.slider', {
 //     effect: 'fade',
