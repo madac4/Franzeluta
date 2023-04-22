@@ -65,6 +65,7 @@ p {
         width: fit-content;
         background-color: $neutral200;
         padding: 12px;
+        border: 1px solid transparent;
         &:hover {
             background-color: #fff;
             color: $error500;
@@ -81,6 +82,20 @@ p {
             color: #fff;
         }
         &--docs {
+            &:hover{
+                color: $primary500;
+                border-color: $primary500;
+            }
+            &:active{
+                background-color: $primary500;
+                border-color: $primary500;
+                color: #fff;
+            }
+            &.tabs__button--active{
+                background-color: $primary500;
+                border-color: $primary500;
+                color: #fff;
+            }
         }
     }
     &__chip {
@@ -203,6 +218,15 @@ p {
         &--big {
             width: 45px;
             height: 45px;
+        }
+    }
+    &__transparent{
+        padding: 20px 0;
+        background-color: #FFFFFF;
+        border: 1px solid #E6E6E6;
+        border-radius: 8px;
+        &:hover{
+            background-color: $neutral200;
         }
     }
 }
@@ -452,11 +476,33 @@ select {
     display: none;
 }
 
+.slider-controls__dots{
+    width: fit-content !important;
+    position: absolute;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+    z-index: 2;
+    .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        border: 1px solid #FFFFFF;
+        opacity: 1;
+        background-color: transparent;
+        &-active {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
 .slider-arrow {
     background: rgba(255, 255, 255, 0.3);
     position: absolute;
     z-index: 2;
     top: 50%;
+    transform: translateY(-50%);
     @include adaptiv-value('padding', 15, 12, 1);
     color: #fff;
     font-size: 24px;
@@ -476,6 +522,25 @@ select {
     }
 }
 
+.title-separator {
+    text-align: center;
+    h1 {
+        position: relative;
+        margin-bottom: 40px;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -24px;
+            width: 60px;
+            height: 1px;
+            background-color: #000;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
 .page-navigation {
     display: flex;
     justify-content: center;
@@ -487,14 +552,11 @@ select {
 
 .sidebar-grid {
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr 32.3%;
     grid-gap: 20px;
     position: relative;
-    @media (max-width: $tablet) {
-        grid-template-columns: 1fr 300px;
-    }
-    @media (max-width: $mobile) {
-        grid-template-columns: 1fr;
+    @media (max-width: $mobile){
+        display: block;
     }
 }
 .single-grid {

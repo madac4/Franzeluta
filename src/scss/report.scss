@@ -1,0 +1,36 @@
+.report{
+    .document{
+        display: flex;
+        align-items: center;
+        background-color: #F9F9F9;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-top: 10px;
+        img{
+            display: block;
+            padding: 15px;
+        }
+        p{
+            border-left: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            font-weight: 300;
+        }
+    }
+    .tabs{
+        margin-top: 50px;
+        &__title{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        &__list{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        &__content{
+            margin-top: 30px;
+        }
+    }
+}

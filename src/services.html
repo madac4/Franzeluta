@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('./components/head.html', {'title': 'Franzeluța S.A.  | Servicii'})
+<body>
+   <div class="wrapper">
+       @@include('./components/header.html')
+       <main>
+           <section class="services">
+                <div class="services__container">
+                    <div class="services__header">
+                        <div class="title-separator">
+                            <h1 class="title-separator">Laboratorul de încercări</h1>
+                        </div>
+                        <div class="sub-title align-center gap-3">
+                            <div class="sub-title__block">
+                                <i class="mdi mdi-map-marker"></i>
+                                <a href="https://goo.gl/maps/41QRDvPVRN3Do94v5">MD 2032, or. Chișinău, str.Sarmizegetusa 30</a>
+                            </div>
+                            <div class="sub-title__block">
+                                <i class="mdi mdi-phone"></i>
+                                <a href="tel:(+373) 0-22-853-551">(+373) 0-22-853-551</a>
+                                <a href="tel:(+373) 0-22-853-554">(+373) 0-22-853-554</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="services-body align-center gap-3">
+                        <div class="page__services-slider services-slider">
+                            <div class="services-slider__body">
+                                <div class="services-slider__slider">
+                                    <div class="slider-services__body swiper">
+                                        <div class="slider-services__slide">
+                                            <img src="@img/laborator.jpg" alt="">
+                                        </div>
+                                        <div class="slider-services__slide">
+                                            <img src="@img/laborator.jpg" alt="">
+                                        </div>
+                                        <div class="slider-services__slide">
+                                            <img src="@img/laborator.jpg" alt="">
+                                        </div>
+                                    </div>
+                        
+                                    <div class="slider-services-controls">
+                                        <div class="slider-services-controls__dots slider-controls__dots"></div>
+                                        <div class="slider-services-controls__arrows slider-arrows">
+                                            <button type="button" class="slider-arrow slider-arrow__prev">
+                                                <i class="mdi mdi-chevron-left"></i>
+                                            </button>
+                                            <button type="button" class="slider-arrow slider-arrow__next">
+                                                <i class="mdi mdi-chevron-right"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-body__desc">
+                            <p>Laboratorul de Încercări “Franzeluța”S.A. prestează servicii de încercări de laborator pentru o gamă largă de produse alimentare (produse de panificație, patisserie, cofetărie, paste făinoase, materii prime) în conformitate cu cerințele standardelor naționale și internaționale.</p>
+                            <p>Competența întregii echipe de specialiști a laboratorului este dovedită prin menținerea unui sistem de management al calității conform SM EN ISO/IEC 17025:2018. Laboratorul este acreditat de către Centrul Național de Acreditare din Republica Moldova “MOLDAC” și este competent să efectueze încercări, definite în Anexă la Certificatul de Acreditare nr.LÎ-017.</p>
+                            <p>Scopul laboratorului este de a satisfice necesitățile consumatorilor, producătorilor, importatorilor și exportatorilor prin efectuarea încercărilor de laborator și asigurarea validității rezultatelor încercărilor. În activitatea sa ,laboratorul mizează întotdeauna pe exactitatea și veridicitatea datelor oferite clienților, menținnîndu-și competența prin participarea la încercări de comparare interlaboratoare și teste de competență la nivel național și internațional.</p>
+                            <div class="services-body__buttons align-center gap-1">
+                                <button class="button button__transparent">
+                                    <img src="@img/icons/pdf.svg" alt="pdf">
+                                    Certificat
+                                </button>
+                                <button class="button button__transparent">
+                                    <img src="@img/icons/docx.svg" alt="docx">
+                                    Tarife
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+           </section>
+       </main>
+       @@include('./components/footer.html')
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="js/app.min.js"></script>
+</body>
+</html>
