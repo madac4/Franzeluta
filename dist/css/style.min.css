@@ -29945,6 +29945,22 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
+.columns-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.columns-2 {
+  grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+}
+
+.columns-3 {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.columns-4 {
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+}
+
 .gap-1 {
   grid-gap: 10px;
 }
@@ -31372,7 +31388,6 @@ select::placeholder {
   margin: 0 auto;
 }
 .shop__body {
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   grid-gap: 20px;
 }
 

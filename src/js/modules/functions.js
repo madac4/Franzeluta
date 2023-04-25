@@ -68,30 +68,33 @@ export const isMobile = {
     },
 };
 
-export function tabs(tabs, tabsButtons, tabsContents) {
-    if (tabs) {
+export function tabs(tabsList) {
+    tabsList.forEach((tabs) => {
+        const tabsGroup = tabs.dataset.tabsGroup;
+        const tabsButtons = tabs.querySelectorAll(`[data-tabs-path]`);
+        const tabsContents = tabs.querySelectorAll(`[data-tabs-target]`);
+
         tabs.addEventListener('click', (e) => {
             if (e.target.classList.contains('tabs__button')) {
                 const tabsPath = e.target.dataset.tabsPath;
-                tabsHandler(tabsPath);
+                tabsHandler(tabsGroup, tabsPath);
             }
         });
-    }
 
-    const tabsHandler = (path) => {
-        tabsButtons.forEach((button) => {
-            button.classList.remove('tabs__button--active');
-        });
-        document.querySelector(`[data-tabs-path="${path}"]`).classList.add('tabs__button--active');
+        const tabsHandler = (group, path) => {
+            tabsButtons.forEach((button) => {
+                button.classList.remove('tabs__button--active');
+            });
+            document.querySelector(`[data-tabs-group="${group}"] [data-tabs-path="${path}"]`).classList.add('tabs__button--active');
 
-        tabsContents.forEach((content) => {
-            content.classList.remove('tabs__content--active');
-        });
-        document
-            .querySelector(`[data-tabs-target="${path}"]`)
-            .classList.add('tabs__content--active');
-    };
+            tabsContents.forEach((content) => {
+                content.classList.remove('tabs__content--active');
+            });
+            document.querySelector(`[data-tabs-group="${group}"] [data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+        };
+    });
 }
+
 
 export function headerMenu(parentMenuItems, parentMenuItemsClass) {
     let currentOpenSubmenu = null;
