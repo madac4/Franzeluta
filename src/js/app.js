@@ -344,6 +344,31 @@ if (document.querySelector('.slider-rest__body')) {
     });
 }
 
+
+if (document.querySelector('.slider-structura__body')) {
+    new Swiper('.slider-structura__body', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoHeight: true,
+        speed: 800,
+        touchRatio: 0,
+        simulateTouch: false,
+        loop: true,
+        preloadImages: false,
+        lazy: true,
+        pagination: {
+            el: '.slider-structura-controls__dots',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.slider-structura-controls .slider-arrow__next',
+            prevEl: '.slider-structura-controls .slider-arrow__prev',
+        },
+    });
+}
+
 if (document.querySelector('.slider-docs__body')) {
     new Swiper('.slider-docs__body', {
         observer: true,
@@ -380,9 +405,54 @@ if (historyImage) {
     });
 }
 
+
 const tabsList = document.querySelectorAll('.tabs')
 
-flsFunctions.tabs(tabsList)
+if (tabsList) {
+    flsFunctions.tabs(tabsList)
+}
+
+const products = document.querySelectorAll('.product')
+const productModal = document.querySelector('.product-modal')
+const overlay = document.querySelector('.overlay')
+
+if (productModal) {
+    products.forEach(product => {
+        product.addEventListener('click', () => {
+            productModal.classList.add('open')
+            overlay.classList.add('active')
+            document.body.classList.add('lock')
+        })
+    })
+
+    const productsModalClose = productModal.querySelector('.product-modal__close')
+    productsModalClose.addEventListener('click', () => {
+        productModal.classList.remove('open')
+        overlay.classList.remove('active')
+        document.body.classList.remove('lock')
+    })
+}
+
+const structuraModal = document.querySelector('.structura-modal')
+const structuraItem = document.querySelectorAll('.structure-grid__item')
+
+if (structuraModal) {
+    structuraItem.forEach(item => {
+        item.addEventListener('click', () => {
+            structuraModal.classList.add('open')
+            overlay.classList.add('active')
+            document.body.classList.add('lock')
+        })
+    })
+
+    const structuraModalClose = structuraModal.querySelector('.structura-modal__close')
+    structuraModalClose.addEventListener('click', () => {
+        structuraModal.classList.remove('open')
+        overlay.classList.remove('active')
+        document.body.classList.remove('lock')
+    })
+}
+
 
 
 // let sliderTemplate = new Swiper('.slider', {

@@ -1,0 +1,92 @@
+.structura-modal{
+    max-width: 1200px;
+    width: 100%;
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    background-color: #FFF;
+    @include adaptiv-value('padding', 60, 40, 1);
+    transition: .3s ease-in;
+    @media (max-width: $mobile){
+        height: 100%;
+        flex-direction: column;
+        overflow: auto;
+        padding: 50px 15px;
+    }
+    &.open{
+        top: 50%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .page__structura-slider {
+        .structura-slider__body {
+            @include adaptiv-value('width', 600, 200, 1);
+            @media (max-width: $mobile){
+                width: 100%;
+            }
+            .structura-slider__slider {
+                position: relative;
+                .slider-structura__body {
+                    .slider-structura__slide {
+                        @media (max-width: $mobile){
+                            width: 100% !important;
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        img{
+                            object-fit: cover;
+                            object-position: center;
+                            border-radius: 8px;
+                        }
+                    }
+                }
+                .slider-structura-controls {
+                    &__dots {
+                        .swiper-pagination-bullet {
+                            &-active {
+                            }
+                        }
+                    }
+                    &__arrows {
+                        .slider-arrow {
+                            z-index: 13;
+                            &__prev {
+                                left: 0;
+                            }
+                            &__next {
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__desc{
+        h1{
+            @include adaptiv-value('margin-bottom', 20, 10, 1);
+        }
+        p{
+            @include adaptiv-value('margin-bottom', 20, 10, 1);
+        }
+    }
+    &__buttons{
+        display: flex;
+        @media (max-width: $mobileSmall){
+           flex-direction: column;
+        }
+    }
+    &__close{
+        position: absolute;
+        @include adaptiv-value('top', 30, 15, 1);
+        @include adaptiv-value('right', 30, 15, 1);
+        @include adaptiv-value('font-size', 32, 24, 1);
+        cursor: pointer;
+    }
+}
