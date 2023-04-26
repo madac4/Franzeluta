@@ -150,7 +150,6 @@ p {
         &--blured {
             background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(4px);
-            padding: 20px;
             color: #fff;
             border: none;
             i {
@@ -159,6 +158,9 @@ p {
             }
             &:active {
                 background: rgba(255, 255, 255, 0.5);
+            }
+            @media (max-width: $tablet){
+                @include adaptiv-value('padding', 15, 12, 1);
             }
         }
     }
@@ -171,6 +173,9 @@ p {
         border: none;
         &:active {
             background: rgba(255, 255, 255, 1);
+        }
+        @media (max-width: $tablet){
+            padding: 15px;
         }
     }
     &__delete {

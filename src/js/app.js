@@ -418,10 +418,13 @@ const overlay = document.querySelector('.overlay')
 
 if (productModal) {
     products.forEach(product => {
-        product.addEventListener('click', () => {
-            productModal.classList.add('open')
-            overlay.classList.add('active')
-            document.body.classList.add('lock')
+        const productsControls = product.querySelector('.product-meta__controls')
+        product.addEventListener('click', (e) => {
+            if (e.target.parentElement !== productsControls) {
+                productModal.classList.add('open')
+                overlay.classList.add('active')
+                document.body.classList.add('lock')
+            }
         })
     })
 
