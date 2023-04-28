@@ -30281,6 +30281,65 @@ select::placeholder {
   visibility: visible;
 }
 
+.product-modal__desc table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.product-modal__desc table p {
+  margin-bottom: 5px;
+}
+
+.product-modal__desc table th {
+  font-weight: 500;
+}
+
+.product-modal__desc table thead {
+  background-color: #EDEFF5;
+}
+
+.product-modal__desc table thead td,
+.product-modal__desc table thead th {
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.product-modal__desc table thead td:first-child,
+.product-modal__desc table thead th:first-child {
+  border-left: none;
+}
+
+.product-modal__desc table thead td:last-child,
+.product-modal__desc table thead th:last-child {
+  border-right: none;
+}
+
+.product-modal__desc table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.product-modal__desc table tbody td,
+.product-modal__desc table tbody th {
+  border: 1px solid #e6e6e6;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  text-align: center;
+}
+
+.product-modal__desc table tbody td:first-child,
+.product-modal__desc table tbody th:first-child {
+  border-left: none;
+}
+
+.product-modal__desc table tbody td:last-child,
+.product-modal__desc table tbody th:last-child {
+  border-right: none;
+}
+
 .footer {
   border-top: 1px solid #e6e6e6;
   padding-top: 20px;
@@ -33154,6 +33213,34 @@ input[type=number] {
   .page-navigation {
     margin-bottom: calc(
                 30px + 20 * ((100vw - 320px) / 980)
+            );
+  }
+
+  .product-modal__desc table thead td,
+  .product-modal__desc table thead th {
+    padding-top: calc(
+                14px + 3 * ((100vw - 320px) / 980)
+            );
+  }
+
+  .product-modal__desc table thead td,
+  .product-modal__desc table thead th {
+    padding-bottom: calc(
+                14px + 3 * ((100vw - 320px) / 980)
+            );
+  }
+
+  .product-modal__desc table tbody td,
+  .product-modal__desc table tbody th {
+    padding-top: calc(
+                14px + 3 * ((100vw - 320px) / 980)
+            );
+  }
+
+  .product-modal__desc table tbody td,
+  .product-modal__desc table tbody th {
+    padding-bottom: calc(
+                14px + 3 * ((100vw - 320px) / 980)
             );
   }
 

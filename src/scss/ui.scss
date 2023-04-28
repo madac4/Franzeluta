@@ -641,21 +641,17 @@ select {
     }
 }
 
-table {
+.product-modal__desc{
+    table{
         width: 100%;
         border-collapse: collapse;
-        box-shadow: 0 0 0 1px #e6e6e6; /* this draws the table border  */
-        border-radius: 8px;
+        border: $border;
         overflow: hidden;
-        @media (max-width: $mobile) {
-            min-width: 730px;
+        p{
+            margin-bottom: 5px;
         }
         th {
             font-weight: 500;
-        }
-        a {
-            color: $primary500;
-            text-decoration: underline;
         }
         thead {
             background-color: $neutral200;
@@ -696,3 +692,4 @@ table {
             }
         }
     }
+}
