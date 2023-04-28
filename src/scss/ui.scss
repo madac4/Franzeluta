@@ -150,7 +150,6 @@ p {
         &--blured {
             background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(4px);
-            padding: 20px;
             color: #fff;
             border: none;
             i {
@@ -159,6 +158,9 @@ p {
             }
             &:active {
                 background: rgba(255, 255, 255, 0.5);
+            }
+            @media (max-width: $tablet){
+                @include adaptiv-value('padding', 15, 12, 1);
             }
         }
     }
@@ -171,6 +173,9 @@ p {
         border: none;
         &:active {
             background: rgba(255, 255, 255, 1);
+        }
+        @media (max-width: $tablet){
+            padding: 15px;
         }
     }
     &__delete {
@@ -588,6 +593,21 @@ select {
     }
 }
 
+.overlay{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
 .mobile-hidden {
     @media (max-width: $mobile) {
         display: none;
@@ -620,3 +640,59 @@ select {
         }
     }
 }
+
+table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 0 1px #e6e6e6; /* this draws the table border  */
+        border-radius: 8px;
+        overflow: hidden;
+        @media (max-width: $mobile) {
+            min-width: 730px;
+        }
+        th {
+            font-weight: 500;
+        }
+        a {
+            color: $primary500;
+            text-decoration: underline;
+        }
+        thead {
+            background-color: $neutral200;
+            td,
+            th {
+                border: $border;
+                border-top: none;
+                @include adaptiv-value('padding-top', 17, 14, 1);
+                @include adaptiv-value('padding-bottom', 17, 14, 1);
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+            }
+            td,
+            th {
+                border: $border;
+                @include adaptiv-value('padding-top', 17, 14, 1);
+                @include adaptiv-value('padding-bottom', 17, 14, 1);
+                text-align: center;
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }

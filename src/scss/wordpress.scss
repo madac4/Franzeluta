@@ -134,7 +134,9 @@ p{
 .cart-popup .item-footer__controls .quantity input::-webkit-outer-spin-button,
 .cart-popup .item-footer__controls .quantity input::-webkit-inner-spin-button,
 .product-meta__controls input::-webkit-outer-spin-button,
-.product-meta__controls input::-webkit-inner-spin-button {
+.product-meta__controls input::-webkit-inner-spin-button, 
+input.button__edit--big.no-hover::-webkit-outer-spin-button,
+input.button__edit--big.no-hover::-webkit-inner-spin-button  {
     -webkit-appearance: none;
     margin: 0;
 }

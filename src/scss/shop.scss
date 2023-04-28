@@ -27,7 +27,15 @@
     border: $border;
     cursor: pointer;
     overflow: hidden;
-    &:hover {
+    @media(any-hover: hover){
+        &:hover {
+            overflow: auto;
+            .product-meta {
+                transform: translateY(0);
+            }
+        }
+    }
+    @media (max-width: $tablet){
         overflow: auto;
         .product-meta {
             transform: translateY(0);
@@ -35,13 +43,13 @@
     }
     &-meta {
         position: absolute;
-        @include adaptiv-value('padding-left', 20, 16, 1);
+        @include adaptiv-value('padding-left', 20, 15, 1);
         @include adaptiv-value('bottom', 30, 16, 1);
         transform: translateY(90%);
         transition: 0.3s;
         &__name {
             color: #fff;
-            @include adaptiv-value('margin-bottom', 20, 10, 1);
+            margin-bottom: 20px;
         }
         &__controls {
             display: flex;
@@ -51,6 +59,9 @@
             button {
                 &:hover {
                     background: rgba(255, 255, 255, 0.6);
+                }
+                i{
+                    pointer-events: none;
                 }
             }
             input {

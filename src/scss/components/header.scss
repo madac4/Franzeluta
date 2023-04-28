@@ -2,6 +2,9 @@
     &__top {
         @include adaptiv-value('padding-top', 20, 15, 1);
         @include adaptiv-value('padding-bottom', 20, 15, 1);
+        @media (max-width: $mobile){
+            box-shadow: 1px 10px 40px rgba(182, 182, 182, 0.4);
+        }
     }
     &__container {
         display: flex;
@@ -242,6 +245,10 @@
     &__bottom {
         border-top: $border;
         border-bottom: $border;
+        box-shadow: 1px 10px 40px rgba(182, 182, 182, 0.4);
+        @media (min-width: $mobile){
+            box-shadow: none;
+        }
         @media (max-width: $mobile) {
             position: fixed;
             right: -300px;
