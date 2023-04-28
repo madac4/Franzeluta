@@ -413,26 +413,30 @@ if (tabsList) {
 }
 
 const products = document.querySelectorAll('.product')
-const productModal = document.querySelector('.product-modal')
 const overlay = document.querySelector('.overlay')
 
-if (productModal) {
+if (products) {
     products.forEach(product => {
         const productsControls = product.querySelector('.product-meta__controls')
+        var productModal = product.nextElementSibling
+
         product.addEventListener('click', (e) => {
-            if (e.target.parentElement !== productsControls) {
-                productModal.classList.add('open')
-                overlay.classList.add('active')
-                document.body.classList.add('lock')
+            if (e.target.parentElement !== productsControls ) {
+                const productID = product.getAttribute('data-id') 
+                if(productModal.getAttribute('data-id') === productID ){
+                    productModal.classList.add('open')
+                    overlay.classList.add('active')
+                    document.body.classList.add('lock')
+                }
             }
         })
     })
-
-    const productsModalClose = productModal.querySelector('.product-modal__close')
-    productsModalClose.addEventListener('click', () => {
-        productModal.classList.remove('open')
-        overlay.classList.remove('active')
-        document.body.classList.remove('lock')
+    document.addEventListener('click', (e) => {
+        if (e.target === overlay || e.target === document.querySelector('.product-modal.open .product-modal__close')) {
+            document.querySelector('.product-modal.open').classList.remove('open')
+            overlay.classList.remove('active')
+            document.body.classList.remove('lock')
+        }
     })
 }
 
