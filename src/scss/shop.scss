@@ -54,8 +54,8 @@
                 }
             }
             input {
-                width: 56px;
-                height: 56px;
+                @include adaptiv-value('width', 56, 40, 1);
+                @include adaptiv-value('height', 56, 40, 1);
                 background: rgba(255, 255, 255, 0.6);
                 backdrop-filter: blur(4px);
                 border-color: transparent;
