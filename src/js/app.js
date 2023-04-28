@@ -22,9 +22,9 @@ if (burger && menu) {
 }
 
 const languages = document.querySelector('.header-languages');
-const toggler = languages.querySelector('.header-languages__current');
 
-if (languages && toggler) {
+if (languages) {
+    const toggler = languages.querySelector('.header-languages__current');
     toggler.addEventListener('click', () => {
         languages.classList.toggle('open');
     });
@@ -85,6 +85,7 @@ if (cartButton && cart && closeCartButton) {
         if (
             !cart.contains(event.target) &&
             event.target !== cartButton &&
+            event.target.parentNode !== cartButton &&
             cart.classList.contains('open')
         ) {
             cart.classList.remove('open');
@@ -190,7 +191,7 @@ if (calendarContainer) {
             datesContainer.appendChild(row);
         }
 
-        const dateInput = document.querySelector('#date-input');
+        const dateInput = document.querySelector('.date-input input');
 
         datesContainer.addEventListener('click', (event) => {
             const cell = event.target;
@@ -218,7 +219,7 @@ if (calendarContainer) {
 
 const orderHours = document.querySelectorAll('.checkout-hours__interval');
 if (orderHours) {
-    const hoursInput = document.querySelector('#hours-input');
+    const hoursInput = document.querySelector('.hours-input input');
     orderHours.forEach((item) => {
         item.addEventListener('click', () => {
             orderHours.forEach((item) => {

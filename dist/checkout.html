@@ -269,25 +269,157 @@
                             </div>
 
                             <div class="checkout-body__customer checkout-box">
-                                <h3>Indică date de contact pentru confirmare comandă:</h3>
-                                <form action="#">
-                                    <input type="text" placeholder="Numele" />
-                                    <input type="text" placeholder="Prenumele" />
-                                    <input type="email" placeholder="Poșta electronică" />
-                                    <input type="tel" placeholder="Numărul de telefon" />
-                                    <input
-                                        type="text"
-                                        placeholder="Data"
-                                        class="hidden"
-                                        id="date-input"
-                                    />
-                                    <input
-                                        type="text"
-                                        class="hidden"
-                                        id="hours-input"
-                                        placeholder="Intervalul de timp"
-                                    />
-                                </form>
+                                <h3>Detalii pentru facturare</h3>
+
+                                <div class="checkout-form">
+                                    <p
+                                        class="form-row validate-required"
+                                        id="billing_last_name_field"
+                                        data-priority="10"
+                                    >
+                                        <label for="billing_last_name" class=""
+                                            >Nume&nbsp;<abbr class="required" title="obligatoriu"
+                                                >*</abbr
+                                            ></label
+                                        ><span class="woocommerce-input-wrapper"
+                                            ><input
+                                                type="text"
+                                                class="input-text"
+                                                name="billing_last_name"
+                                                id="billing_last_name"
+                                                placeholder="Numele"
+                                                value="Orbu"
+                                                autocomplete="family-name"
+                                        /></span>
+                                    </p>
+                                    <p
+                                        class="form-row validate-required"
+                                        id="billing_first_name_field"
+                                        data-priority="20"
+                                    >
+                                        <label for="billing_first_name" class=""
+                                            >Prenume&nbsp;<abbr class="required" title="obligatoriu"
+                                                >*</abbr
+                                            ></label
+                                        ><span class="woocommerce-input-wrapper"
+                                            ><input
+                                                type="text"
+                                                class="input-text"
+                                                name="billing_first_name"
+                                                id="billing_first_name"
+                                                placeholder="Prenumele"
+                                                value="Petru"
+                                                autocomplete="given-name"
+                                        /></span>
+                                    </p>
+                                    <p
+                                        class="form-row form-row-wide validate-required validate-email"
+                                        id="billing_email_field"
+                                        data-priority="30"
+                                    >
+                                        <label for="billing_email" class=""
+                                            >Poșta electronică&nbsp;<abbr
+                                                class="required"
+                                                title="obligatoriu"
+                                                >*</abbr
+                                            ></label
+                                        ><span class="woocommerce-input-wrapper"
+                                            ><input
+                                                type="email"
+                                                class="input-text"
+                                                name="billing_email"
+                                                id="billing_email"
+                                                placeholder="Poșta electronică"
+                                                value="anrei.bors@gmail.com"
+                                                autocomplete="email username"
+                                        /></span>
+                                    </p>
+                                    <p
+                                        class="form-row form-row-wide validate-required validate-phone"
+                                        id="billing_phone_field"
+                                        data-priority="40"
+                                    >
+                                        <label for="billing_phone" class=""
+                                            >Numărul de telefon&nbsp;<abbr
+                                                class="required"
+                                                title="obligatoriu"
+                                                >*</abbr
+                                            ></label
+                                        ><span class="woocommerce-input-wrapper"
+                                            ><input
+                                                type="tel"
+                                                class="input-text"
+                                                name="billing_phone"
+                                                id="billing_phone"
+                                                placeholder="Numărul de telefon"
+                                                value="+37367525214"
+                                                autocomplete="tel"
+                                        /></span>
+                                    </p>
+                                    <p
+                                        class="form-row date-input hidden validate-required"
+                                        id="billing_data_field"
+                                        data-priority="50"
+                                        data-fcf-field="billing_data"
+                                    >
+                                        <label for="billing_data">
+                                            Data
+                                            <abbr class="required" title="Required Field">*</abbr>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            class="input-text"
+                                            name="billing_data"
+                                            id="billing_data"
+                                            placeholder=""
+                                            value=""
+                                            data-fcf-field-input="billing_data"
+                                        />
+                                    </p>
+                                    <p
+                                        class="form-row hours-input hidden validate-required"
+                                        id="billing_time_field"
+                                        data-priority="60"
+                                        data-fcf-field="billing_time"
+                                    >
+                                        <label for="billing_time">
+                                            Intervalul de timp
+                                            <abbr class="required" title="Required Field">*</abbr>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            class="input-text"
+                                            name="billing_time"
+                                            id="billing_time"
+                                            placeholder=""
+                                            value=""
+                                            data-fcf-field-input="billing_time"
+                                        />
+                                    </p>
+                                    <p
+                                        class="form-row form-row-wide inspire_checkout_fields_hide update_totals_on_change validate-required"
+                                        id="billing_country_field"
+                                        data-priority="70"
+                                    >
+                                        <label for="billing_country" class=""
+                                            >Țară/regiune&nbsp;<abbr
+                                                class="required"
+                                                title="obligatoriu"
+                                                >*</abbr
+                                            ></label
+                                        ><span class="woocommerce-input-wrapper hidden"
+                                            ><strong>Moldova</strong
+                                            ><input
+                                                type="hidden"
+                                                name="billing_country"
+                                                id="billing_country"
+                                                value="MD"
+                                                autocomplete="country"
+                                                class="country_to_state"
+                                                readonly="readonly"
+                                        /></span>
+                                    </p>
+                                </div>
                             </div>
 
                             <div class="checkout-body__calendar checkout-box">

@@ -47,6 +47,11 @@
     }
     
     p{
-        @include adaptiv-value('margin-bottom', 20, 10, 1);
+        margin-bottom: 10px;
+    }
+    ul{
+        li{
+            list-style-type: disc;
+        }
     }
 }

@@ -82,16 +82,16 @@ p {
             color: #fff;
         }
         &--docs {
-            &:hover{
+            &:hover {
                 color: $primary500;
                 border-color: $primary500;
             }
-            &:active{
+            &:active {
                 background-color: $primary500;
                 border-color: $primary500;
                 color: #fff;
             }
-            &.tabs__button--active{
+            &.tabs__button--active {
                 background-color: $primary500;
                 border-color: $primary500;
                 color: #fff;
@@ -225,12 +225,12 @@ p {
             height: 45px;
         }
     }
-    &__transparent{
+    &__transparent {
         padding: 20px 0;
-        background-color: #FFFFFF;
-        border: 1px solid #E6E6E6;
+        background-color: #ffffff;
+        border: 1px solid #e6e6e6;
         border-radius: 8px;
-        &:hover{
+        &:hover {
             background-color: $neutral200;
         }
     }
@@ -370,6 +370,22 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
+.columns-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.columns-2 {
+    grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
+}
+
+.columns-3 {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.columns-4 {
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+}
+
 .gap-1 {
     grid-gap: 10px;
 }
@@ -481,7 +497,7 @@ select {
     display: none;
 }
 
-.slider-controls__dots{
+.slider-controls__dots {
     width: fit-content !important;
     position: absolute;
     bottom: 20px !important;
@@ -491,12 +507,12 @@ select {
     .swiper-pagination-bullet {
         width: 9px;
         height: 9px;
-        border: 1px solid #FFFFFF;
+        border: 1px solid #ffffff;
         opacity: 1;
         background-color: transparent;
         &-active {
             background: rgba(255, 255, 255, 0.8);
-            border: 1px solid #FFFFFF;
+            border: 1px solid #ffffff;
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
     }
@@ -560,7 +576,7 @@ select {
     grid-template-columns: 1fr 32.3%;
     grid-gap: 20px;
     position: relative;
-    @media (max-width: $mobile){
+    @media (max-width: $mobile) {
         display: block;
     }
 }
@@ -624,3 +640,59 @@ select {
         }
     }
 }
+
+table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 0 0 1px #e6e6e6; /* this draws the table border  */
+        border-radius: 8px;
+        overflow: hidden;
+        @media (max-width: $mobile) {
+            min-width: 730px;
+        }
+        th {
+            font-weight: 500;
+        }
+        a {
+            color: $primary500;
+            text-decoration: underline;
+        }
+        thead {
+            background-color: $neutral200;
+            td,
+            th {
+                border: $border;
+                border-top: none;
+                @include adaptiv-value('padding-top', 17, 14, 1);
+                @include adaptiv-value('padding-bottom', 17, 14, 1);
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: none;
+                    }
+                }
+            }
+            td,
+            th {
+                border: $border;
+                @include adaptiv-value('padding-top', 17, 14, 1);
+                @include adaptiv-value('padding-bottom', 17, 14, 1);
+                text-align: center;
+                &:first-child {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+            }
+        }
+    }
