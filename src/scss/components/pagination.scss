@@ -7,7 +7,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 10px;
-        &__item {
+        li {
             span.current {
                 background-color: $error500;
                 color: #fff !important;
@@ -20,25 +20,22 @@
                     border-color: $error500;
                 }
             }
-            &.prev,
-            &.next {
-                a{
+            a.prev,
+            a.next {
+                i {
                     font-size: 24px;
-                }
-                span {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    color: $neutral900;
                     @include adaptiv-value('width', 44, 38, 1);
                     @include adaptiv-value('height', 44, 38, 1);
+                    transition: .3s;
                     &:hover {
                         border-color: $error500;
+                        color: $error500;
                     }
                 }
-            }
-            a.next,
-            a.prev {
-                border: none;
             }
             a,
             span {
