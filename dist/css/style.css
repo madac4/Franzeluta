@@ -31070,25 +31070,21 @@ select::placeholder {
   gap: 10px;
 }
 
-.pagination-list__item span.current {
+.pagination-list li span.current {
   background-color: #EF4C49;
   color: #fff !important;
   border: 1px solid #EF4C49;
 }
 
-.pagination-list__item:hover a,
-.pagination-list__item:hover span {
+.pagination-list li:hover a,
+.pagination-list li:hover span {
   color: #EF4C49;
   border-color: #EF4C49;
 }
 
-.pagination-list__item.prev a,
-.pagination-list__item.next a {
+.pagination-list li a.prev i,
+.pagination-list li a.next i {
   font-size: 24px;
-}
-
-.pagination-list__item.prev span,
-.pagination-list__item.next span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31098,22 +31094,22 @@ select::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #2C2C30;
   width: 44px;
   height: 44px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.pagination-list__item.prev span:hover,
-.pagination-list__item.next span:hover {
+.pagination-list li a.prev i:hover,
+.pagination-list li a.next i:hover {
   border-color: #EF4C49;
+  color: #EF4C49;
 }
 
-.pagination-list__item a.next,
-.pagination-list__item a.prev {
-  border: none;
-}
-
-.pagination-list__item a,
-.pagination-list__item span {
+.pagination-list li a,
+.pagination-list li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31183,7 +31179,11 @@ select::placeholder {
 }
 
 .product-modal p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.product-modal ul li {
+  list-style-type: disc;
 }
 
 .structura-modal {
@@ -33352,29 +33352,29 @@ input[type=number] {
             );
   }
 
-  .pagination-list__item.prev span,
-  .pagination-list__item.next span {
+  .pagination-list li a.prev i,
+  .pagination-list li a.next i {
     width: calc(
                 38px + 6 * ((100vw - 320px) / 980)
             );
   }
 
-  .pagination-list__item.prev span,
-  .pagination-list__item.next span {
+  .pagination-list li a.prev i,
+  .pagination-list li a.next i {
     height: calc(
                 38px + 6 * ((100vw - 320px) / 980)
             );
   }
 
-  .pagination-list__item a,
-  .pagination-list__item span {
+  .pagination-list li a,
+  .pagination-list li span {
     width: calc(
                 38px + 6 * ((100vw - 320px) / 980)
             );
   }
 
-  .pagination-list__item a,
-  .pagination-list__item span {
+  .pagination-list li a,
+  .pagination-list li span {
     height: calc(
                 38px + 6 * ((100vw - 320px) / 980)
             );
@@ -33417,12 +33417,6 @@ input[type=number] {
   }
 
   .product-modal h1 {
-    margin-bottom: calc(
-                10px + 10 * ((100vw - 320px) / 980)
-            );
-  }
-
-  .product-modal p {
     margin-bottom: calc(
                 10px + 10 * ((100vw - 320px) / 980)
             );

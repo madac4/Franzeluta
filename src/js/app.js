@@ -371,7 +371,7 @@ if (document.querySelector('.slider-structura__body')) {
 }
 
 if (document.querySelector('.slider-docs__body')) {
-    new Swiper('.slider-docs__body', {
+    const docsSwiper = new Swiper('.slider-docs__body', {
         observer: true,
         observeParents: true,
         slidesPerView: 1,
@@ -396,6 +396,12 @@ if (document.querySelector('.slider-docs__body')) {
             prevEl: '.slider-docs-controls .slider-arrow__prev',
         },
     });
+    const currentSlideImage = document.querySelector('.slider-docs__slide.swiper-slide.swiper-slide-active img').src
+    let openUp = document.querySelector('.slider-docs-controls__crop.button.button__icon');
+    openUp.href = currentSlideImage;
+    docsSwiper.on('slideChange', function () {
+        openUp.href = document.querySelectorAll('.slider-docs__slide.swiper-slide')[docsSwiper.activeIndex].querySelector('img').src;
+    });
 }
 
 const historyImage = document.querySelector('.history-container');
@@ -407,6 +413,14 @@ if (historyImage) {
 }
 
 
+const historyContainer = document.querySelector('.history-container__images');
+if (historyContainer) {
+    const historyContainerWidth = historyContainer.offsetWidth;
+    const imageBefore = document.querySelector('.image-before .history-slider__image');
+    imageBefore.style.width = `${historyContainerWidth}px`;
+}
+
+
 const tabsList = document.querySelectorAll('.tabs')
 
 if (tabsList) {
@@ -414,26 +428,30 @@ if (tabsList) {
 }
 
 const products = document.querySelectorAll('.product')
-const productModal = document.querySelector('.product-modal')
 const overlay = document.querySelector('.overlay')
 
-if (productModal) {
+if (products) {
     products.forEach(product => {
         const productsControls = product.querySelector('.product-meta__controls')
+        var productModal = product.nextElementSibling
+
         product.addEventListener('click', (e) => {
-            if (e.target.parentElement !== productsControls) {
-                productModal.classList.add('open')
-                overlay.classList.add('active')
-                document.body.classList.add('lock')
+            if (e.target.parentElement !== productsControls ) {
+                const productID = product.getAttribute('data-id') 
+                if(productModal.getAttribute('data-id') === productID ){
+                    productModal.classList.add('open')
+                    overlay.classList.add('active')
+                    document.body.classList.add('lock')
+                }
             }
         })
     })
-
-    const productsModalClose = productModal.querySelector('.product-modal__close')
-    productsModalClose.addEventListener('click', () => {
-        productModal.classList.remove('open')
-        overlay.classList.remove('active')
-        document.body.classList.remove('lock')
+    document.addEventListener('click', (e) => {
+        if (e.target === overlay || e.target === document.querySelector('.product-modal.open .product-modal__close')) {
+            document.querySelector('.product-modal.open').classList.remove('open')
+            overlay.classList.remove('active')
+            document.body.classList.remove('lock')
+        }
     })
 }
 
