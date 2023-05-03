@@ -8,9 +8,8 @@ const header = document.querySelector('.header');
 
 if (burger && menu) {
     flsFunctions.burger(burger, menu, header);
-    document.addEventListener('click', function (event) {
-        if (
-            !menu.contains(event.target) &&
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target) &&
             event.target !== burger &&
             menu.classList.contains('active')
         ) {
@@ -51,7 +50,7 @@ if (cartButton && cart && closeCartButton) {
     const pageHeaderHeight = document.querySelector('.header').offsetHeight;
     const cartItemsList = document.querySelector('.cart-popup__body');
 
-    cartButton.addEventListener('click', function () {
+    cartButton.addEventListener('click', function() {
         cart.classList.toggle('open');
         const viewportWidth = window.innerWidth;
         if (viewportWidth <= 640) {
@@ -64,7 +63,7 @@ if (cartButton && cart && closeCartButton) {
                 pageHeaderHeight -
                 70 +
                 'px';
-            window.addEventListener('resize', function () {
+            window.addEventListener('resize', function() {
                 cartItemsList.style.maxHeight =
                     window.innerHeight -
                     cartHeaderHeight -
@@ -76,14 +75,13 @@ if (cartButton && cart && closeCartButton) {
         }
     });
 
-    closeCartButton.addEventListener('click', function () {
+    closeCartButton.addEventListener('click', function() {
         cart.classList.remove('open');
         document.body.classList.remove('lock');
     });
 
-    document.addEventListener('click', function (event) {
-        if (
-            !cart.contains(event.target) &&
+    document.addEventListener('click', function(event) {
+        if (!cart.contains(event.target) &&
             event.target !== cartButton &&
             event.target.parentNode !== cartButton &&
             cart.classList.contains('open')
@@ -248,7 +246,7 @@ if (searchBar && searchBarClose && searchToggler) {
         }, 300);
     }
 
-    searchToggler.addEventListener('click', function () {
+    searchToggler.addEventListener('click', function() {
         if (searchBar.classList.contains('open')) {
             closeSidebar();
         } else {
@@ -256,14 +254,14 @@ if (searchBar && searchBarClose && searchToggler) {
         }
     });
 
-    document.addEventListener('click', function (event) {
+    document.addEventListener('click', function(event) {
         const targetElement = event.target;
         if (!searchBar.contains(targetElement) && !searchToggler.contains(targetElement)) {
             closeSidebar();
         }
     });
 
-    searchBarClose.addEventListener('click', function () {
+    searchBarClose.addEventListener('click', function() {
         closeSidebar();
     });
 }
@@ -383,7 +381,7 @@ if (document.querySelector('.slider-docs__body')) {
         pagination: {
             el: '.slider-docs-pagination',
             type: 'fraction',
-            renderFraction: function (currentClass, totalClass) {
+            renderFraction: function(currentClass, totalClass) {
                 return (
                     `<span class="${currentClass}"></span>` +
                     '<span>din</span>' +
@@ -399,7 +397,7 @@ if (document.querySelector('.slider-docs__body')) {
     const currentSlideImage = document.querySelector('.slider-docs__slide.swiper-slide.swiper-slide-active img').src
     let openUp = document.querySelector('.slider-docs-controls__crop.button.button__icon');
     openUp.href = currentSlideImage;
-    docsSwiper.on('slideChange', function () {
+    docsSwiper.on('slideChange', function() {
         openUp.href = document.querySelectorAll('.slider-docs__slide.swiper-slide')[docsSwiper.activeIndex].querySelector('img').src;
     });
 }
@@ -427,54 +425,78 @@ if (tabsList) {
     flsFunctions.tabs(tabsList)
 }
 
+
 const products = document.querySelectorAll('.product')
 const overlay = document.querySelector('.overlay')
+
+function closeModal() {
+    const openModals = document.querySelectorAll('.open')
+    if (openModals) {
+        openModals.forEach(modal => {
+            modal.classList.remove('open')
+        })
+    }
+    overlay.classList.remove('active')
+    document.body.classList.remove('lock')
+}
 
 if (products) {
     products.forEach(product => {
         const productsControls = product.querySelector('.product-meta__controls')
         var productModal = product.nextElementSibling
-
         product.addEventListener('click', (e) => {
-            if (e.target.parentElement !== productsControls ) {
-                const productID = product.getAttribute('data-id') 
-                if(productModal.getAttribute('data-id') === productID ){
+            if (e.target.parentElement !== productsControls) {
+                const productID = product.getAttribute('data-id')
+                if (productModal.getAttribute('data-id') === productID) {
                     productModal.classList.add('open')
                     overlay.classList.add('active')
                     document.body.classList.add('lock')
                 }
             }
         })
-    })
-    document.addEventListener('click', (e) => {
-        if (e.target === overlay || e.target === document.querySelector('.product-modal.open .product-modal__close')) {
-            document.querySelector('.product-modal.open').classList.remove('open')
-            overlay.classList.remove('active')
-            document.body.classList.remove('lock')
+        const closeBtn = productModal.querySelector('.product-modal__close')
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                closeModal()
+            })
+        }
+        document.onclick = function(event) {
+            if (event.target === overlay) {
+                closeModal()
+            }
         }
     })
 }
 
-const structuraModal = document.querySelector('.structura-modal')
 const structuraItem = document.querySelectorAll('.structure-grid__item')
 
-if (structuraModal) {
+if (structuraItem) {
     structuraItem.forEach(item => {
+        const structuraId = item.getAttribute('data-structure-item-id')
+        const structuraModal = item.nextElementSibling
         item.addEventListener('click', () => {
-            structuraModal.classList.add('open')
-            overlay.classList.add('active')
-            document.body.classList.add('lock')
+            if (structuraModal.getAttribute('data-structura-modal-id') === structuraId) {
+                structuraModal.classList.add('open')
+                overlay.classList.add('active')
+                document.body.classList.add('lock')
+            }
         })
-    })
-
-    const structuraModalClose = structuraModal.querySelector('.structura-modal__close')
-    structuraModalClose.addEventListener('click', () => {
-        structuraModal.classList.remove('open')
-        overlay.classList.remove('active')
-        document.body.classList.remove('lock')
+        const closeBtn = document.querySelector('.structura-modal__close')
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                closeModal()
+            })
+        }
+        document.onclick = function(event) {
+            if (event.target === overlay) {
+                closeModal()
+            }
+        }
     })
 }
 
+const productModalClose = document.querySelector('.product-modal.open .product-modal__close')
+const structureModalClose = document.querySelector('.structura-modal.open .structura-modal__close')
 
 
 // let sliderTemplate = new Swiper('.slider', {

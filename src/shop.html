@@ -1,72 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+@@include('./components/head.html', {'title': 'Franzeluța S.A.'})
 
-    <body>
-        <div class="wrapper">
-            @@include('./components/header.html')
-            <main>
-                <section class="shop">
-                    <div class="shop__container">
-                        <div class="shop__header">
-                            <h1>Produse de panificație</h1>
-                            @@include('./components/page-navigation.html')
-                            <p>
-                                Facem pâine cu tradiţii, pentru întreaga ţară! De peste şapte
-                                decenii, „Franzeluţa” S.A produce pâine cu gust de... pâine. De-a
-                                lungul timpului, am aflat cele mai preţioase secrete şi reţete,
-                                ne-am modernizat, dar gustul de altădată nu l-am schimbat... Alegem
-                                cu mare grijă materia primă, acordăm o atenţie sporită întregului
-                                proces de fabricare, adăugăm multă dragoste pentru ca să obţinem
-                                produse gustoase, dar şi sănătoase.
-                            </p>
-                        </div>
+<body>
+    <div class="wrapper">
+        @@include('./components/header.html')
+        <main>
+            <section class="shop">
+                <div class="shop__container">
+                    <div class="shop__header">
+                        <h1>Produse de panificație</h1>
+                        @@include('./components/page-navigation.html')
+                        <p>
+                            Facem pâine cu tradiţii, pentru întreaga ţară! De peste şapte decenii, „Franzeluţa” S.A produce pâine cu gust de... pâine. De-a lungul timpului, am aflat cele mai preţioase secrete şi reţete, ne-am modernizat, dar gustul de altădată nu l-am schimbat...
+                            Alegem cu mare grijă materia primă, acordăm o atenţie sporită întregului proces de fabricare, adăugăm multă dragoste pentru ca să obţinem produse gustoase, dar şi sănătoase.
+                        </p>
+                    </div>
 
-                        <div class="shop__body grid">
-                            <div
-                                class="product"
-                                style="
+                    <div class="shop__body grid">
+                        <div class="product" style="
                                     background: linear-gradient(
                                             180deg,
                                             rgba(0, 0, 0, 0) -13.62%,
                                             rgba(0, 0, 0, 0.4) 100%
                                         ),
                                         url(@img/product.jpeg);
-                                "
-                                data-id="1"
-                            >
-                                <div class="product__meta product-meta">
-                                    <div class="product-meta__name">
-                                        Franzelă „Bran”cu tărâțe / <strong>15</strong> MDL
-                                    </div>
-                                    <div class="product-meta__controls">
-                                        <button class="button button__icon button__icon--blured">
+                                " data-id="1">
+                            <div class="product__meta product-meta">
+                                <div class="product-meta__name">
+                                    Franzelă „Bran”cu tărâțe / <strong>15</strong> MDL
+                                </div>
+                                <div class="product-meta__controls">
+                                    <button class="button button__icon button__icon--blured">
                                             <i class="mdi mdi-minus"></i>
                                         </button>
-                                        <input type="number" min="1" max="100" value="1" />
-                                        <button class="button button__icon button__icon--blured">
+                                    <input type="number" min="1" max="100" value="1" />
+                                    <button class="button button__icon button__icon--blured">
                                             <i class="mdi mdi-plus"></i>
                                         </button>
-                                        <a class="button button__add" href="#">Adaugă în coș</a>
-                                    </div>
+                                    <a class="button button__add" href="#">Adaugă în coș</a>
                                 </div>
                             </div>
-                            @@include('./components/product-modal.html', {'id': '1'})
+                        </div>
+                        @@include('./components/product-modal.html', {'id': '1'})
 
                         <div class="shop__body grid columns-4">
-                          
-                            <div
-                                class="product"
-                                style="
+
+                            <div class="product" style="
                                     background: linear-gradient(
                                             180deg,
                                             rgba(0, 0, 0, 0) -13.62%,
                                             rgba(0, 0, 0, 0.4) 100%
-                                        ),
-                                        url(@img/product.jpeg);
-                                "
-                                data-id="2"
-                            >
+                                    ),
+                                    url(@img/product.jpeg);
+                                " data-id="2">
                                 <div class="product__meta product-meta">
                                     <div class="product-meta__name">
                                         Franzelă „Bran”cu tărâțe / <strong>15</strong> MDL
@@ -84,18 +71,14 @@
                                 </div>
                             </div>
                             @@include('./components/product-modal.html', {'id': '2'})
-                            <div
-                                class="product"
-                                style="
+                            <div class="product" style="
                                     background: linear-gradient(
                                             180deg,
                                             rgba(0, 0, 0, 0) -13.62%,
                                             rgba(0, 0, 0, 0.4) 100%
                                         ),
                                         url(@img/product.jpeg);
-                                "
-                                data-id="3"
-                            >
+                                " data-id="3">
                                 <div class="product__meta product-meta">
                                     <div class="product-meta__name">
                                         Franzelă „Bran”cu tărâțe / <strong>15</strong> MDL
@@ -116,17 +99,16 @@
                         </div>
                         @@include('./components/pagination.html')
                     </div>
-                </section>
-<<<<<<< HEAD
-                <div class="overlay"></div>
-=======
-                @@include('./components/product-modal.html')
->>>>>>> d5356fc4462799cd1988130f1b2a1482c0941129
-            </main>
-            @@include('./components/footer.html')
-        </div>
+            </section>
+            <<<<<<< HEAD <div class="overlay">
+                </div>
+                ======= @@include('./components/product-modal.html') >>>>>>> d5356fc4462799cd1988130f1b2a1482c0941129
+        </main>
+        @@include('./components/footer.html')
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="js/app.min.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
 </html>

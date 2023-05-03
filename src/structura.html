@@ -1,72 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('./components/head.html', {'title': 'Franzeluța S.A.'})
+@@include('./components/head.html', {'title': 'Franzeluța S.A.'})
 
-    <body>
-        <div class="wrapper">
-            @@include('./components/header.html')
-            <main>
-                <div class="structure">
-                    @@include('./components/page-navigation.html')
-                    <div class="structure__container">
-                        <h1>Structura organizatorică a Combinatului</h1>
-                        <div class="structure__grid grid grid-6 gap-2 stricture-grid">
-                            <div
-                                class="structure-grid__item"
-                                style="
+<body>
+    <div class="wrapper">
+        @@include('./components/header.html')
+        <main>
+            <div class="structure">
+                @@include('./components/page-navigation.html')
+                <div class="structure__container">
+                    <h1>Structura organizatorică a Combinatului</h1>
+                    <div class="structure__grid grid grid-6 gap-2 stricture-grid">
+                        <div class="structure-grid__item" data-structure-item-id="1" style="
                                     background: url('@img/structura1.jpg') 50% 50% / cover no-repeat;
-                                "
-                            >
-                                <span> Fabrica de pâine nr. 2 </span>
-                            </div>
-                            <div
-                                class="structure-grid__item"
-                                style="
+                                ">
+                            <span> Fabrica de pâine nr. 2 </span>
+                        </div>
+                        @@include('./components/structura-modal.html', {'id': '1'})
+                        <div class="structure-grid__item" data-structure-item-id="2" style="
                                     background: url('@img/structura2.jpg') 50% 50% / cover no-repeat;
-                                "
-                            >
-                                <span> Fabrica de pâine nr. 3 </span>
-                            </div>
-                            <div
-                                class="structure-grid__item"
-                                style="
+                                ">
+                            <span> Fabrica de pâine nr. 3 </span>
+                        </div>
+                        @@include('./components/structura-modal.html', {'id': '2'})
+                        <div class="structure-grid__item" data-structure-item-id="3" style="
                                     background: url('@img/structura3.jpg') 50% 50% / cover no-repeat;
-                                "
-                            >
-                                <span> Fabrica de paste făinoase </span>
-                            </div>
-                            <div
-                                class="structure-grid__item"
-                                style="
+                                ">
+                            <span> Fabrica de paste făinoase </span>
+                        </div>
+                        @@include('./components/structura-modal.html', {'id': '3'})
+                        <div class="structure-grid__item" data-structure-item-id="4" style="
                                     background: url('@img/structura4.jpg') 50% 50% / cover no-repeat;
-                                "
-                            >
-                                <span> Laboratorul de încercări </span>
-                            </div>
-                            <div
-                                class="structure-grid__item"
-                                style="
+                                ">
+                            <span> Laboratorul de încercări </span>
+                        </div>
+                        @@include('./components/structura-modal.html', {'id': '4'})
+                        <div class="structure-grid__item" data-structure-item-id="5" style="
                                     background: url('@img/structura5.jpg') 50% 50% / cover no-repeat;
-                                "
-                            >
-                                <span> Comerțul de firmă </span>
-                            </div>
-                            <div
-                                class="structure-grid__item structure-grid__item--cover"
-                                style="background-color: #f8f9fb"
-                            >
-                                <span> Ateliere mecanice experimentale </span>
-                            </div>
+                                ">
+                            <span> Comerțul de firmă </span>
+                        </div>
+                        @@include('./components/structura-modal.html', {'id': '5'})
+                        <div class="structure-grid__item structure-grid__item--cover" style="background-color: #f8f9fb">
+                            <span> Ateliere mecanice experimentale </span>
                         </div>
                     </div>
                 </div>
-                <div class="overlay active"></div>
-                @@include('./components/structura-modal.html')
-            </main>
-            @@include('./components/footer.html')
-        </div>
+            </div>
+            <div class="overlay"></div>
+        </main>
+        @@include('./components/footer.html')
+    </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-        <script src="js/app.min.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
 </html>

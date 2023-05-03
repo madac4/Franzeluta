@@ -33163,6 +33163,7 @@ time {
   margin-top: 20px;
 }
 .rest__main .page__rest-slider .rest-slider__body .rest-slider__slider {
+  border-radius: 8px;
   position: relative;
   width: 860px;
 }
@@ -33181,6 +33182,7 @@ time {
 }
 .rest__main .page__rest-slider .rest-slider__body .rest-slider__slider .slider-rest__body .slider-rest__slide img {
   width: 100%;
+  border-radius: 8px;
 }
 .rest__main .page__rest-slider .rest-slider__body .rest-slider__slider .slider-rest-controls__arrows .slider-arrow__prev {
   left: 50px;

@@ -18,6 +18,7 @@
         .page__rest-slider {
             .rest-slider__body {
                 .rest-slider__slider {
+                    border-radius: 8px;
                     position: relative;
                     @include adaptiv-value('width', 860, 150, 1);
                     @media (max-width: $mobile) {
@@ -28,6 +29,7 @@
                         .slider-rest__slide {
                             img {
                                 width: 100%;
+                                border-radius: 8px;
                             }
                         }
                     }
@@ -61,7 +63,7 @@
             margin-bottom: 0;
         }
         h3 {
-            padding: 30px 0;
+            padding: 20px 0;
             text-align: center;
             background-color: $neutral200;
             border-bottom: $border;
