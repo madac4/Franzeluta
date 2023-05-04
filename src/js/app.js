@@ -473,24 +473,26 @@ if (structuraItem) {
     structuraItem.forEach(item => {
         const structuraId = item.getAttribute('data-structure-item-id')
         const structuraModal = item.nextElementSibling
-        item.addEventListener('click', () => {
-            if (structuraModal.getAttribute('data-structura-modal-id') === structuraId) {
-                structuraModal.classList.add('open')
-                overlay.classList.add('active')
-                document.body.classList.add('lock')
-            }
-        })
-        const closeBtn = document.querySelectorAll('.structura-modal__close')
-        if (closeBtn) {
-            closeBtn.forEach(close => {
-                close.addEventListener('click', () => {
-                    closeModal()
-                })
+        if (!item.classList.contains('structure-grid__item--cover')) {
+            item.addEventListener('click', () => {
+                if (structuraModal.getAttribute('data-structura-modal-id') === structuraId) {
+                    structuraModal.classList.add('open')
+                    overlay.classList.add('active')
+                    document.body.classList.add('lock')
+                }
             })
-        }
-        document.onclick = function(event) {
-            if (event.target === overlay) {
-                closeModal()
+            const closeBtn = document.querySelectorAll('.structura-modal__close')
+            if (closeBtn) {
+                closeBtn.forEach(close => {
+                    close.addEventListener('click', () => {
+                        closeModal()
+                    })
+                })
+            }
+            document.onclick = function(event) {
+                if (event.target === overlay) {
+                    closeModal()
+                }
             }
         }
     })
