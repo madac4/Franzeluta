@@ -1,109 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    @@include('./components/head.html', {'title': 'Franzeluța S.A. | Istoric'})
-    <body>
-        <div class="wrapper">
-            @@include('./components/header.html')
-            <main>
-                <div class="history">
-                    @@include('./components/page-navigation.html')
-                    <div class="history__container custom-container">
-                        <div class="history-container">
-                            <div class="history-container__images">
-                                <div class="history-title">
-                                    <h1>Istoria combinatului</h1>
-                                </div>
-                                <img
-                                    class="image-before history-slider__image"
-                                    src="@img/1947.png"
-                                    alt="Before back & white image"
-                                />
-                                <img
-                                    class="image-after history-slider__image"
-                                    src="@img/2019.png"
-                                    alt="After color image"
-                                />
-                                <input
-                                    type="range"
-                                    min="0"
-                                    max="100"
-                                    value="50"
-                                    class="history-slider"
-                                    aria-label="Procentage of before and after photo shown"
-                                />
-                                <div class="history-slider__line"></div>
-                                <div class="history-slider__button" aria-hidden="true">
-                                    <i class="mdi mdi-code-tags"></i>
-                                </div>
+@@include('./components/head.html', {'title': 'Franzeluța S.A. | Istoric'})
+
+<body>
+    <div class="wrapper">
+        @@include('./components/header.html')
+        <main>
+            <div class="history">
+                @@include('./components/page-navigation.html')
+                <div class="history__container custom-container">
+                    <div class="history-title history-title--mobile desktop-hidden--mobile">
+                        <h1>Istoria combinatului</h1>
+                    </div>
+                    <div class="history-container">
+                        <div class="history-container__images">
+                            <div class="history-title mobile-hidden">
+                                <h1>Istoria combinatului</h1>
+                            </div>
+                            <img class="image-before history-slider__image" src="@img/1947.png" alt="Before back & white image" />
+                            <img class="image-after history-slider__image" src="@img/2019.png" alt="After color image" />
+                            <input type="range" min="0" max="100" value="50" class="history-slider" aria-label="Procentage of before and after photo shown" />
+                            <div class="history-slider__line"></div>
+                            <div class="history-slider__button" aria-hidden="true">
+                                <i class="mdi mdi-code-tags"></i>
                             </div>
                         </div>
-                        <div class="page-content">
-                            <p>
-                                Au trecut şapte decenii de când industria mecanizată de panificaţie
-                                din ţara noastră şi-a facut debutul - unul dificil, dar extrem de
-                                necesar acelor timpuri. Nu există nimic mai de preţ, mai scump, mai
-                                necesar, decât simpla bucată de pâine, care în acea perioadă era
-                                condiţia principală a vieţii. Anume din aceste considerente, după
-                                cel de-al doilea război mondial, în anul 1947, la Chişinău a luat
-                                naştere prima fabrică de pâine, în baza unei brutării renovate. Cu
-                                paşi mici, dar siguri, numărul întreprinderilor de profil a crescut
-                                şi prin asocierea lor a fost fondat, în 1960, Combinatul de
-                                Panificaţie.
-                            </p>
-                            <p>
-                                Parcursul istoric a fost unul anevoios, dar totodată constructiv.
-                                Roadele muncii a generaţii de lucrători au fost bogate şi apreciate
-                                de consumatorii care până astăzi sunt devotaţi gustului pâinii
-                                adevărate. În prezent, fabricile sunt echipate cu utilaj modern, de
-                                performanţă, iar cea mai gustoasă pâine, cei mai gustoşi colaci,
-                                covrigei, produse de patiserie se produc aici, în marea familie
-                                FRANZELUŢA.
-                            </p>
-                            <p>
-                                Începutul de cale - anul 1947. A fost demarată o campanie de
-                                construcţii ale unor întreprinderi noi şi de modernizare a celor
-                                existente. Mai târziu, mai exact în anul 1955 a fost înfiinţată o
-                                secţie de covrigărie şi s-a început producţia de pesmeţi. În 1956 a
-                                fost înfiinţată fabrica de pâine nr.4, iar după reconstrucţia din
-                                1971 - 1972 şi o serie de îmbunătăţiri de ordin tehnic, aici a fost
-                                deschisă o secţie de producere a produselor de patiserie. Tot în
-                                această perioadă a fost dată în exploatare secţia de producere a
-                                vafelor şi torturilor din vafe şi napolitane. În anul 1972,
-                                Combinatul de pâine din Chişinău este reorganizat în
-                                A.P.”Moldhlebprom”, în componenţa căreia intrau şi întreprinderile
-                                de panificaţie din republică. Vorbim despre oraşele Cahul, Tiraspol,
-                                Bălţi, Soroca, Orhei, Ungheni ş.a.
-                            </p>
-                            <p>
-                                Fondarea Combinatului de panificaţie a dat posibilitatea
-                                centralizării serviciilor, organizării unui birou de comandă, a fost
-                                implimentat regimul de autofinanţare, care, odată impus, a
-                                contribuit la mărimea volumului de producţie şi la îmbogăţirea gamei
-                                sortimentale.
-                            </p>
-                            <p>
-                                În decembrie 1973 a fost dată în exploatare fabrica nr.2 cu o
-                                capacitate de 135 tone pe zi. Datorită aplicării unor scheme
-                                tehnologice progresiste s-a obţinut, în 1975, titlul de
-                                „Întreprindere de înalt nivel”. În 1975 a fost dată în exploatare
-                                Fabrica de paste făinoase, având linii pentru fabricarea pastelor,
-                                iar în anul 1985 se începe producţia de biscuiţi. În prezent, aici
-                                se produc o varietate mare de paste făinoase. Astfel, combinatul a
-                                devenit o întreprindere modernă a industriei de panificaţie din
-                                ţară.
-                            </p>
-                        </div>
+                    </div>
+                    <div class="page-content">
+                        <p>
+                            Au trecut şapte decenii de când industria mecanizată de panificaţie din ţara noastră şi-a facut debutul - unul dificil, dar extrem de necesar acelor timpuri. Nu există nimic mai de preţ, mai scump, mai necesar, decât simpla bucată de pâine, care în acea
+                            perioadă era condiţia principală a vieţii. Anume din aceste considerente, după cel de-al doilea război mondial, în anul 1947, la Chişinău a luat naştere prima fabrică de pâine, în baza unei brutării renovate. Cu paşi mici,
+                            dar siguri, numărul întreprinderilor de profil a crescut şi prin asocierea lor a fost fondat, în 1960, Combinatul de Panificaţie.
+                        </p>
+                        <p>
+                            Parcursul istoric a fost unul anevoios, dar totodată constructiv. Roadele muncii a generaţii de lucrători au fost bogate şi apreciate de consumatorii care până astăzi sunt devotaţi gustului pâinii adevărate. În prezent, fabricile sunt echipate cu utilaj
+                            modern, de performanţă, iar cea mai gustoasă pâine, cei mai gustoşi colaci, covrigei, produse de patiserie se produc aici, în marea familie FRANZELUŢA.
+                        </p>
+                        <p>
+                            Începutul de cale - anul 1947. A fost demarată o campanie de construcţii ale unor întreprinderi noi şi de modernizare a celor existente. Mai târziu, mai exact în anul 1955 a fost înfiinţată o secţie de covrigărie şi s-a început producţia de pesmeţi. În
+                            1956 a fost înfiinţată fabrica de pâine nr.4, iar după reconstrucţia din 1971 - 1972 şi o serie de îmbunătăţiri de ordin tehnic, aici a fost deschisă o secţie de producere a produselor de patiserie. Tot în această perioadă
+                            a fost dată în exploatare secţia de producere a vafelor şi torturilor din vafe şi napolitane. În anul 1972, Combinatul de pâine din Chişinău este reorganizat în A.P.”Moldhlebprom”, în componenţa căreia intrau şi întreprinderile
+                            de panificaţie din republică. Vorbim despre oraşele Cahul, Tiraspol, Bălţi, Soroca, Orhei, Ungheni ş.a.
+                        </p>
+                        <p>
+                            Fondarea Combinatului de panificaţie a dat posibilitatea centralizării serviciilor, organizării unui birou de comandă, a fost implimentat regimul de autofinanţare, care, odată impus, a contribuit la mărimea volumului de producţie şi la îmbogăţirea gamei
+                            sortimentale.
+                        </p>
+                        <p>
+                            În decembrie 1973 a fost dată în exploatare fabrica nr.2 cu o capacitate de 135 tone pe zi. Datorită aplicării unor scheme tehnologice progresiste s-a obţinut, în 1975, titlul de „Întreprindere de înalt nivel”. În 1975 a fost dată în exploatare Fabrica
+                            de paste făinoase, având linii pentru fabricarea pastelor, iar în anul 1985 se începe producţia de biscuiţi. În prezent, aici se produc o varietate mare de paste făinoase. Astfel, combinatul a devenit o întreprindere modernă
+                            a industriei de panificaţie din ţară.
+                        </p>
                     </div>
                 </div>
-            </main>
-            @@include('./components/footer.html')
-        </div>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"
-            integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w=="
-            crossorigin="anonymous"
-            referrerpolicy="no-referrer"
-        ></script>
-        <script src="js/app.min.js"></script>
-    </body>
+            </div>
+        </main>
+        @@include('./components/footer.html')
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js" integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/app.min.js"></script>
+</body>
+
 </html>

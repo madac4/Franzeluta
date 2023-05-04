@@ -32,14 +32,18 @@
             .structura-slider__slider {
                 position: relative;
                 .slider-structura__body {
+                    .swiper-wrapper {
+                        align-items: center;
+                    }
                     .slider-structura__slide {
+                        max-width: 600px;
+                        max-height: 500px;
                         border-radius: 8px;
                         @media (max-width: $mobile) {
-                            width: 100% !important;
+                            max-width: 100% !important;
                         }
                         img {
-                            max-width: 600px;
-                            max-height: 500px;
+                            width: 100%;
                             @media (max-width: $mobile) {
                                 margin: 0 auto;
                                 max-width: 100%;
@@ -48,11 +52,6 @@
                     }
                 }
                 .slider-structura-controls {
-                    &__dots {
-                        .swiper-pagination-bullet {
-                            &-active {}
-                        }
-                    }
                     &__arrows {
                         .slider-arrow {
                             z-index: 13;
@@ -81,6 +80,7 @@
         max-height: 300px;
     }
     &__buttons {
+        margin-top: 10px;
         display: flex;
         @media (max-width: $mobileSmall) {
             flex-direction: column;

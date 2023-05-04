@@ -12,7 +12,8 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-.mdi:before, .mdi-set{
+.mdi:before,
+.mdi-set {
     line-height: 0 !important;
 }
 
@@ -25,6 +26,7 @@ body {
     &.lock {
         overflow: hidden;
         touch-action: none;
+        -ms-touch-action: none;
     }
 }
 
