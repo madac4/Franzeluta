@@ -31451,10 +31451,10 @@ select::placeholder {
   z-index: 13;
 }
 .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura-controls__arrows .slider-arrow__prev {
-  left: 0;
+  left: 10px;
 }
 .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura-controls__arrows .slider-arrow__next {
-  right: 0;
+  right: 10px;
 }
 .structura-modal__desc h1 {
   margin-bottom: 20px;
@@ -33219,7 +33219,7 @@ time {
   margin-bottom: 0;
 }
 .rest__aside h3 {
-  padding: 30px 0;
+  padding: 20px 0;
   text-align: center;
   background-color: #EDEFF5;
   border-bottom: 1px solid #e6e6e6;

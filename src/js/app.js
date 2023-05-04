@@ -9,10 +9,7 @@ const header = document.querySelector('.header');
 if (burger && menu) {
     flsFunctions.burger(burger, menu, header);
     document.addEventListener('click', function(event) {
-        if (!menu.contains(event.target) &&
-            event.target !== burger &&
-            menu.classList.contains('active')
-        ) {
+        if (!menu.contains(event.target) && event.target !== burger && menu.classList.contains('active')) {
             menu.classList.remove('active');
             burger.classList.remove('active');
             document.body.classList.remove('lock');
@@ -80,7 +77,7 @@ if (cartButton && cart && closeCartButton) {
         document.body.classList.remove('lock');
     });
 
-    document.addEventListener('click', function(event) {
+    document.addEventListener('click', (event) => {
         if (!cart.contains(event.target) &&
             event.target !== cartButton &&
             event.target.parentNode !== cartButton &&
@@ -454,10 +451,12 @@ if (products) {
                 }
             }
         })
-        const closeBtn = productModal.querySelector('.product-modal__close')
+        const closeBtn = document.querySelectorAll('.product-modal__close')
         if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                closeModal()
+            closeBtn.forEach(close => {
+                close.addEventListener('click', () => {
+                    closeModal()
+                })
             })
         }
         document.onclick = function(event) {
@@ -481,10 +480,12 @@ if (structuraItem) {
                 document.body.classList.add('lock')
             }
         })
-        const closeBtn = document.querySelector('.structura-modal__close')
+        const closeBtn = document.querySelectorAll('.structura-modal__close')
         if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                closeModal()
+            closeBtn.forEach(close => {
+                close.addEventListener('click', () => {
+                    closeModal()
+                })
             })
         }
         document.onclick = function(event) {
@@ -494,10 +495,6 @@ if (structuraItem) {
         }
     })
 }
-
-const productModalClose = document.querySelector('.product-modal.open .product-modal__close')
-const structureModalClose = document.querySelector('.structura-modal.open .structura-modal__close')
-
 
 // let sliderTemplate = new Swiper('.slider', {
 //     effect: 'fade',
