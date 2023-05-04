@@ -347,17 +347,12 @@ if (document.querySelector('.slider-structura__body')) {
         observeParents: true,
         slidesPerView: 1,
         spaceBetween: 0,
-        autoHeight: true,
         speed: 800,
         touchRatio: 0,
         simulateTouch: false,
         loop: true,
         preloadImages: false,
         lazy: true,
-        pagination: {
-            el: '.slider-structura-controls__dots',
-            clickable: true,
-        },
         navigation: {
             nextEl: '.slider-structura-controls .slider-arrow__next',
             prevEl: '.slider-structura-controls .slider-arrow__prev',

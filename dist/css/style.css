@@ -31408,7 +31408,7 @@ select::placeholder {
     height: 100%;
     flex-direction: column;
     overflow: auto;
-    padding: 50px 15px;
+    padding: 60px 15px;
   }
 }
 .structura-modal.open {
@@ -31434,18 +31434,23 @@ select::placeholder {
 .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider {
   position: relative;
 }
+.structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura__body .slider-structura__slide {
+  border-radius: 8px;
+}
 @media (max-width: 47.99875rem) {
   .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura__body .slider-structura__slide {
     width: 100% !important;
   }
-  .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura__body .slider-structura__slide img {
-    width: 100%;
-  }
 }
 .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura__body .slider-structura__slide img {
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
+  max-width: 600px;
+  max-height: 500px;
+}
+@media (max-width: 47.99875rem) {
+  .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura__body .slider-structura__slide img {
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 .structura-modal .page__structura-slider .structura-slider__body .structura-slider__slider .slider-structura-controls__arrows .slider-arrow {
   z-index: 13;
@@ -31475,6 +31480,10 @@ select::placeholder {
                 10px + 10 * ((100vw - 320px) / 980)
             );
   }
+}
+.structura-modal__info {
+  overflow-y: scroll;
+  max-height: 300px;
 }
 .structura-modal__buttons {
   display: flex;

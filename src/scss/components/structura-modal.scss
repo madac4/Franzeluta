@@ -16,7 +16,7 @@
         height: 100%;
         flex-direction: column;
         overflow: auto;
-        padding: 50px 15px;
+        padding: 60px 15px;
     }
     &.open {
         top: 50%;
@@ -33,16 +33,17 @@
                 position: relative;
                 .slider-structura__body {
                     .slider-structura__slide {
+                        border-radius: 8px;
                         @media (max-width: $mobile) {
                             width: 100% !important;
-                            img {
-                                width: 100%;
-                            }
                         }
                         img {
-                            object-fit: cover;
-                            object-position: center;
-                            border-radius: 8px;
+                            max-width: 600px;
+                            max-height: 500px;
+                            @media (max-width: $mobile) {
+                                margin: 0 auto;
+                                max-width: 100%;
+                            }
                         }
                     }
                 }
@@ -74,6 +75,10 @@
         p {
             @include adaptiv-value('margin-bottom', 20, 10, 1);
         }
+    }
+    &__info {
+        overflow-y: scroll;
+        max-height: 300px;
     }
     &__buttons {
         display: flex;
